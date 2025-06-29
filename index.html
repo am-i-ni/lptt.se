@@ -146,4 +146,206 @@
       <h2 style="font-family:'DM Serif Display', serif;">Resurser & verktyg</h2>
       <ul style="font-family:'Nunito', sans-serif;">
         <li><a href="https://www.myndighet.se/" target="_blank" rel="noopener">Myndigheten för digital förvaltning</a></li>
-        <li><a href="checklista.pdf">
+        <li><a href="checklista.pdf">Checklista (PDF)</a></li>
+        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE-verktyget</a></li>
+        <li><a href="kurser.html">Kurser & webinars</a></li>
+      </ul>
+    </section>
+
+    <!-- Verktyg (PTS) -->
+    <section id="verktyg" class="mb-5">
+      <h2 style="font-family:'DM Serif Display', serif;">Verktyg från PTS</h2>
+      <ul style="font-family:'Nunito', sans-serif;">
+        <li><a href="https://lptt.pts.se/" target="_blank" rel="noopener">Testa tillgänglighet – PTS LPTT</a></li>
+        <li><a href="https://lptt-rapportering.pts.se/" target="_blank" rel="noopener">Rapportera avvikelser – PTS LPTT Rapportering</a></li>
+      </ul>
+    </section>
+
+    <!-- Processkarta enligt WCAG/WAI -->
+    <section id="processkarta" class="mb-5">
+      <h2 style="font-family:'DM Serif Display', serif;">Processkarta för tillgänglighet enligt WCAG/WAI</h2>
+      <img src="assets/processkarta-wcag-wai-bw.png" alt="Svartvit processkarta för tillgänglighet enligt WCAG/WAI med steg Styrning → Kartläggning → Planering → Implementering → Testning & Validering → Övervakning & Rapportering" class="img-fluid mb-4" />
+      <div style="font-family:'Nunito', sans-serif;">
+        <h3>1. Styrning</h3>
+        <p>Skapa tillgänglighetspolicy, utse ansvariga och säkra ledningsstöd.</p>
+        <h3>2. Kartläggning</h3>
+        <p>Gör nulägesanalys mot WCAG-krav och prioritera insatser.</p>
+        <h3>3. Planering</h3>
+        <p>Ta fram handlingsplan med mål, tidplan och budget.</p>
+        <h3>4. Implementering</h3>
+        <p>Utför kod- och designändringar enligt WCAG/WAI-tekniker.</p>
+        <h3>5. Testning & Validering</h3>
+        <p>Genomför manuella och automatiska tester, involvera användare.</p>
+        <h3>6. Övervakning & Rapportering</h3>
+        <p>Följ upp status, rapportera resultat och justera åtgärdsplanen.</p>
+      </div>
+    </section>
+
+    <!-- FAQ med alla frågor och svar -->
+    <section id="faq" class="mb-5">
+      <h2 style="font-family:'DM Serif Display', serif;">Vanliga frågor (FAQ)</h2>
+      <div style="font-family:'Nunito', sans-serif;">
+        <!-- Utvecklare -->
+        <h3>Utvecklare</h3>
+        <!-- 20 Utvecklarfrågor -->
+        <details><summary>1. Vad är WCAG?</summary><p>Web Content Accessibility Guidelines (WCAG) är riktlinjer framtagna av W3C för att göra webbinnehåll mer tillgängligt för personer med funktionsnedsättningar.</p></details>
+        <details><summary>2. Vilka WCAG-nivåer gäller enligt lagen?</summary><p>Lagen kräver minst WCAG 2.1 nivå AA för webbplatser, appar och dokument. Vissa grundläggande krav (nivå A) måste alltid uppfyllas.</p></details>
+        <details><summary>3. Hur kontrollerar jag färgkontrast?</summary><p>Använd verktyg som WAVE eller Axe för att mäta kontrastförhållanden mot WCAG-krav (minst 4.5:1 för brödtext). Säkerställ att alla text- och UI-element klarar testet.</p></details>
+        <details><summary>4. Hur implementerar jag ARIA-roller korrekt?</summary><p>Använd semantiska HTML-element i första hand, och komplettera med ARIA-attribut endast där det behövs för att beskriva UI-komponenter som annars inte är semantiska.</p></details>
+        <details><summary>5. Hur märker jag upp formulärfält?</summary><p>Använd <code>&lt;label&gt;</code> kopplat till <code>input</code> via <code>for</code>/<code>id</code>. Lägg till <code>aria-describedby</code> för beskrivningar och felmeddelanden.</p></details>
+        <details><summary>6. Hur skriver jag alt-text för bilder?</summary><p>Beskriv kortfattat och meningsfullt vad bilden förmedlar. Lämna <code>alt=""</code> på dekorativa bilder så att skärmläsare hoppar över dem.</p></details>
+        <details><summary>7. Hur hanterar jag tidsbaserade medier?</summary><p>Erbjud textning för videor och transkribering av ljud. Ge användaren kontroller för paus, stopp och volym.</p></details>
+        <details><summary>8. Hur säkerställer jag tangentbordsnavigering?</summary><p>Se till att alla interaktiva element är tillgängliga via <code>Tab</code> och ha synliga fokusindikatorer (<code>:focus</code>). Implementera en “skip to content”-länk.</p></details>
+        <details><summary>9. Hur testar jag med skärmläsare?</summary><p>Använd gratisverktyg som NVDA eller VoiceOver. Navigera hela flödet med tangentbordet och kontrollera att informationen läses upp i korrekt ordning.</p></details>
+        <details><summary>10. Hur använder jag semantiska element?</summary><p>Använd <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> och <code>&lt;footer&gt;</code> för att strukturera sidan. Det underlättar både för användare och hjälpmedel.</p></details>
+        <details><summary>11. Hur säkerställer jag responsiv design?</summary><p>Använd flexbox eller CSS Grid och %-/em-enheter istället för fasta pixlar. Testa i olika skärmstorlekar och med förstorade vyer.</p></details>
+        <details><summary>12. Hur tar jag hänsyn till användarens preferenser för animation?</summary><p>Respektera <code>prefers-reduced-motion</code> i CSS för att minska eller ta bort onödiga animationer.</p></details>
+        <details><summary>13. Hur hanterar jag felmeddelanden?</summary><p>Använd <code>role="alert"</code> eller <code>aria-live="assertive"</code> på felmeddelanden så att skärmläsare uppmärksammas direkt.</p></details>
+        <details><summary>14. Hur strukturerar jag rubriker?</summary><p>Följ hierarkin H1→H2→H3 osv. Hoppa inte nivåer och se till att varje avsnitt har en tydlig rubrik.</p></details>
+        <details><summary>15. Hur hanterar jag språkändringar?</summary><p>Ange <code>lang="sv"</code> för svenskt innehåll och <code>lang="en"</code> för engelskt. För enstaka ord: <code>&lt;span lang="en"&gt;…&lt;/span&gt;</code>.</p></details>
+        <details><summary>16. Hur validerar jag kontinuerligt tillgänglighet?</summary><p>Integrera automatiska tester (t.ex. Axe-CLI) i er CI/CD-pipeline för att fånga fel tidigt.</p></details>
+        <details><summary>17. Hur spårar jag tillgänglighetsproblem?</summary><p>Använd ert buggrapporteringssystem (JIRA, GitHub Issues) med etiketter som <code>accessibility</code> för att hålla koll på ärenden.</p></details>
+        <details><summary>18. Hur dokumenterar jag tillgänglighetsarbete?</summary><p>Skapa en sektion i er kodbas- eller komponent-dokumentation där ni beskriver hur varje komponent uppfyller WCAG-kraven.</p></details>
+        <details><summary>19. Hur utbildar jag andra utvecklare?</summary><p>Håll korta, återkommande workshops och dela checklistor för vanliga tillgänglighetsåtgärder.</p></details>
+        <details><summary>20. Hur stöder jag mörkt/ljust läge?</summary><p>Använd CSS-variabler och <code>prefers-color-scheme</code> för att byta mellan kontrastschema utan att ändra markup.</p></details>
+
+        <!-- Designers -->
+        <h3>Designers</h3>
+        <details><summary>1. Hur planerar jag färgscheman med god kontrast?</summary><p>Använd verktyg som Contrast Checker (WebAIM) för att säkerställa minst 4.5:1 kontrast mellan text och bakgrund.</p></details>
+        <details><summary>2. Vilka typsnitt fungerar bäst för läsbarhet?</summary><p>Sans-serif-typsnitt som Nunito är bra för brödtext, och serif-typsnitt som DM Serif Display passar rubriker.</p></details>
+        <details><summary>3. Hur skapar jag tydliga fokusindikatorer?</summary><p>Använd en synlig ram eller bakgrundsfärgsskiftning som skiljer sig tydligt från designen vid <code>:focus</code>.</p></details>
+        <details><summary>4. Hur designar jag formulärfält?</summary><p>Ge varje fält tillräcklig storlek, tydlig label och generöst mellanrum. Visa felmeddelanden i anslutning till fälten.</p></details>
+        <details><summary>5. Hur hanterar jag ikon-användning?</summary><p>Ge varje ikon en <code>aria-hidden="true"</code> om den är dekorativ, och använd text eller <code>aria-label</code> om den är funktionell.</p></details>
+        <details><summary>6. Hur gör jag wireframes tillgängliga?</summary><p>Skissa tidigt på kontrast, rubrikhierarki och navigationsflöden med hjälp av komponentbibliotek som redan är WCAG-testade.</p></details>
+        <details><summary>7. Hur visualiserar jag flöden för skärmläsaranvändare?</summary><p>Ta med noteringar om sekventiell läsordning och ARIA-roller i dina mockups.</p></details>
+        <details><summary>8. Hur utvärderar jag kognitiv tillgänglighet?</summary><p>Använd enkelt språk, bryt upp text i korta stycken och undvik överdriven animation.</p></details>
+        <details><summary>9. Hur prototypar jag med tillgänglighet?</summary><p>Använd verktyg som Figma-plugin:ar för kontrastkontroll och skapa interaktiva prototyper med tangentbordsnavigering.</p></details>
+        <details><summary>10. Hur skapar jag konsistenta komponenter?</summary><p>Bygg ett design­system där varje komponent dokumenteras med tillgänglighetsanvisningar (fokus, ARIA, färg).</p></details>
+        <details><summary>11. Hur testar jag användbarhet med hjälpmedel?</summary><p>Genomför tidiga användartester med personer som använder skärmläsare eller förlitar sig på tangentbord.</p></details>
+        <details><summary>12. Hur säkerställer jag läsbarhet vid förstoring?</summary><p>Designa med relativ typografi (em/rem) och testa i t.ex. 200 % zoom.</p></details>
+        <details><summary>13. Hur hanterar jag responsiva breakpoints?</summary><p>Testa designen i små, medelstora och stora vyer—säkra att inga element försvinner utanför viewport.</p></details>
+        <details><summary>14. Hur utformar jag tydliga knappar?</summary><p>Använd generösa klickområden (minst 44×44 px) och tydlig textlabel, inte bara ikon.</p></details>
+        <details><summary>15. Hur inkluderar jag visuella hjälpmedel?</summary><p>Använd infografik och diagram med tydliga etiketter, alt-texter och beskrivningar i text.</p></details>
+        <details><summary>16. Hur kommunicerar jag tillgänglighetsprinciper i teamet?</summary><p>Skapa kortfattade “design tokens” och checklistor som enkelt kan användas i design­verktyg.</p></details>
+        <details><summary>17. Hur anpassar jag animationer för användare?</summary><p>Ge användaren möjlighet att stänga av animationer eller sänka hastighet via <code>prefers-reduced-motion</code>.</p></details>
+        <details><summary>18. Hur gör jag komplex data tillgänglig?</summary><p>Använd tabeller med korrekt <code>&lt;thead&gt;</code>/<code>&lt;tbody&gt;</code> och beskrivningstext före datat.</p></details>
+        <details><summary>19. Hur utvärderar jag kontrast i mockups?</summary><p>Använd färgkontrast­plugin i Figma eller Adobe XD för att se till att alla element klarar AA-kravet.</p></details>
+        <details><summary>20. Hur förbereder jag styleguides för utvecklingsteamet?</summary><p>Inkludera kodexempel, ARIA-anvisningar och designspecar för varje komponent i ert styleguide­dokument.</p></details>
+
+        <!-- Produktägare -->
+        <h3>Produktägare</h3>
+        <details><summary>1. Vad innebär lagen för vår produkt?</summary><p>Alla digitala tjänster som erbjuds till allmänheten måste uppfylla WCAG 2.1 AA-krav enligt SFS 2023:254.</p></details>
+        <details><summary>2. Vilka deadlines gäller?</summary><p>Från 28 september 2025 måste nya tjänster vara tillgänglighetsanpassade; befintliga senast 30 juni 2028.</p></details>
+        <details><summary>3. Hur budgeterar jag tillgänglighetsarbete?</summary><p>Räkna in tid för granskning, utveckling, test och dokumentation i varje sprintplanering.</p></details>
+        <details><summary>4. Hur prioriterar jag funktioner utifrån tillgänglighet?</summary><p>Gruppera krav i “måste”, “bör” och “kan” enligt fonden i lagen och använd WCAG-checklistan som mall.</p></details>
+        <details><summary>5. Hur mäter jag efterlevnad?</summary><p>Använd automatiska verktyg och manuella tester, samt involvera användare med funktionsnedsättning i acceptanstester.</p></details>
+        <details><summary>6. Hur rapporterar jag status internt?</summary><p>Skapa en dashboard med öppna ärenden, testresultat och procentuell täckning mot WCAG-nivå AA.</p></details>
+        <details><summary>7. Hur involverar jag intressenter?</summary><p>Kommunicera regelbundet via demos och rapporter hur tillgänglighetsarbetet går och vilka vinster det ger.</p></details>
+        <details><summary>8. Hur hanterar jag risker kring försenad leverans?</summary><p>Identifiera kritiska åtgärder tidigt och se till att kompetens och resurser finns på plats innan deadline.</p></details>
+        <details><summary>9. Hur följer jag upp avvikelser mot PTS?</summary><p>Rapportera enligt PTS rutiner via LPTT-rapportering och åtgärda avvikelser inom rimlig tid.</p></details>
+        <details><summary>10. Hur utbildar jag teamet i lagen?</summary><p>Anordna workshops med extern expert (t.ex. Axess Lab) och använd PTS e-lärning.</p></details>
+        <details><summary>11. Hur väljer jag leverantörer med rätt kompetens?</summary><p>Kräv certifiering (t.ex. CPACC) eller tidigare referenser på väl implementerad tillgänglighet.</p></details>
+        <details><summary>12. Hur säkerställer jag kontinuerlig förbättring?</summary><p>Inför retrospektivpunkter specifikt för tillgänglighet vid varje sprintavslut.</p></details>
+        <details><summary>13. Hur dokumenterar jag efterlevnad för revision?</summary><p>Spara testprotokoll, rapporter och checklister i ett gemensamt dokumentarkiv.</p></details>
+        <details><summary>14. Hur förankrar jag budget i organisationen?</summary><p>Visa på minskade rättsliga risker och ökad användarnöjdhet som affärsnytta.</p></details>
+        <details><summary>15. Hur integrerar jag QA med tillgänglighet?</summary><p>Lägg till tillgänglighets­kontroller i era QA-testplaner och Definition of Done.</p></details>
+        <details><summary>16. Hur säkerställer jag att nya funktioner följer lagen?</summary><p>Kräv tillgänglighetsreview som godkännande­kriterium inför release.</p></details>
+        <details><summary>17. Hur hanterar jag externa krav (EU-direktiv)?</summary><p>Synka er tillgänglighetspolicy med EU-direktivet (EU 2016/2102) som ligger till grund för SFS 2023:254.</p></details>
+        <details><summary>18. Hur rapporterar jag till styrelse/ledning?</summary><p>Presentera månadsvis status med KPI:er som % täckning och antal avvikelser.</p></details>
+        <details><summary>19. Hur stämmer jag av med juridikavdelningen?</summary><p>Gör löpande granskning av era tolkningar av lagen med intern/extern juristexpert.</p></details>
+        <details><summary>20. Hur förbereder jag för tillsyn från PTS?</summary><p>Samla all dokumentation, visa upp användartester och automatiserade testresultat vid en eventuell tillsyn.</p></details>
+
+        <!-- Testare -->
+        <h3>Testare</h3>
+        <details><summary>1. Vilka verktyg används för automatisk testning?</summary><p>Populära är Axe, Lighthouse och WAVE. Integrera dem i CI/CD för kontinuerlig kontroll.</p></details>
+        <details><summary>2. Hur utför jag manuella tester?</summary><p>Använd skärmläsare (NVDA, VoiceOver) och testa tangentbordsnavigering genom hela flödet.</p></details>
+        <details><summary>3. Hur skriver jag testfall för tillgänglighet?</summary><p>Basera testfallen på WCAG-kriterier (t.ex. 1.1.1 non-text content) och definiera godkännande­kriterier.</p></details>
+        <details><summary>4. Hur rapporterar jag fel och brister?</summary><p>Ange WCAG-kriterie (A/AA), steg för att reproducera och skärmdump vid behov i ert ärende­system.</p></details>
+        <details><summary>5. Hur hanterar jag regressionstest?</summary><p>Spara automatiserade testresultat och jämför mot tidigare rapporter för att fånga återintroducerade fel.</p></details>
+        <details><summary>6. Hur testar jag videors textning?</summary><p>Kontrollera att alla dialoger och ljudbeskrivningar finns i undertexterna i synk med videon.</p></details>
+        <details><summary>7. Hur mäter jag färgkontrast?</summary><p>Använd kontrastmätare som Colour Contrast Analyser och verifiera mot WCAG 2.1 AA-kraven.</p></details>
+        <details><summary>8. Hur testar jag responsivitet?</summary><p>Använd webbläsarens utvecklarverktyg och fysiska enheter med olika skärmstorlekar.</p></details>
+        <details><summary>9. Hur involverar jag användare i tester?</summary><p>Rekrytera personer med olika funktionsnedsättningar och följ ett strukturerat testprotokoll.</p></details>
+        <details><summary>10. Hur testar jag formulär?</summary><p>Utför tangentbordsnavigering, kontrollera etiketter och felmeddelanden enligt WCAG-kriterier.</p></details>
+        <details><summary>11. Hur testar jag ARIA-attribut?</summary><p>Verifiera att roller, states och properties återspeglas korrekt i hjälpmedel och DOM.</p></details>
+        <details><summary>12. Hur testar jag alternativa textbeskrivningar?</summary><p>Stäng av bilder och kontrollera att <code>alt</code>-texter förmedlar nödvändig information.</p></details>
+        <details><summary>13. Hur skapar jag en testchecklista?</summary><p>Gör en matriz med WCAG-kriterier mot UI-komponenter och dokumentera pass/fail.</p></details>
+        <details><summary>14. Hur prioriterar jag testinsatser?</summary><p>Börja med kärnflöden (inloggning, köp, kontaktformulär) där användarimpacten är störst.</p></details>
+        <details><summary>15. Hur dokumenterar jag testresultat?</summary><p>Samla skärmdumpar, teststeg och felkoder i ert testhanteringsverktyg för spårbarhet.</p></details>
+        <details><summary>16. Hur kör jag CLI-tester i pipeline?</summary><p>Installera Axe-CLI eller pa11y som npm-paket och kör dem som del av era build-script.</p></details>
+        <details><summary>17. Hur testar jag komplexa interaktiva element?</summary><p>Gör användartester och kontrollera ARIA-anpassning med skärmläsare i realtid.</p></details>
+        <details><summary>18. Hur testar jag dark mode?</summary><p>Byt <code>prefers-color-scheme</code> i devtools och verifiera kontrast och läsbarhet.</p></details>
+        <details><summary>19. Hur följer jag upp åtgärder?</summary><p>Gör återtest av stängda ärenden och lägg in i ert regressionstestpaket.</p></details>
+        <details><summary>20. Hur rapporterar jag tillgänglighetsstatus?</summary><p>Skapa ett månatligt testprotokoll som visar buggar per WCAG-nivå och täckningsgrad.</p></details>
+
+        <!-- Chefer -->
+        <h3>Chefer</h3>
+        <details><summary>1. Vilka juridiska skyldigheter har vi?</summary><p>Offentlig och privat sektor måste följa lagen om produkters och tjänsters tillgänglighet (SFS 2023:254) och WCAG 2.1 AA.</p></details>
+        <details><summary>2. Vad händer vid bristande efterlevnad?</summary><p>PTS kan utfärda förelägganden, föreläganden om vite eller driva ärenden till förvaltningsrätt.</p></details>
+        <details><summary>3. Hur säkrar jag resurser för tillgänglighet?</summary><p>Avsätt tid i projektplaner och budgetera för externa experter och licenser för testverktyg.</p></details>
+        <details><summary>4. Hur utser jag ansvariga?</summary><p>Utnämn en tillgänglighetsansvarig på ledningsnivå och en operativ kontakt i varje projektteam.</p></details>
+        <details><summary>5. Hur mäter jag affärsnyttan?</summary><p>Följ upp ökad användartillfredsställelse, färre supportsamtal och lägre juridisk risk.</p></details>
+        <details><summary>6. Hur hanterar jag rapportering till ledningen?</summary><p>Rapportera KPI:er som % WCAG-täckning, antal avvikelser och status på åtgärdsplan.</p></details>
+        <details><summary>7. Hur integrerar jag tillgänglighet i styrmodeller?</summary><p>Lägg till tillgänglighet som en del av era kvalitets- och riskparametrar i projektstyrningen.</p></details>
+        <details><summary>8. Hur följer jag upp leverantörer?</summary><p>Ställ krav på tillgänglighet i RFP:er och granska deras leverans mot WCAG-testprotokoll.</p></details>
+        <details><summary>9. Hur bygger jag intern kompetens?</summary><p>Investera i utbildning, certifieringar (IAAP) och återkommande workshops för era utvecklare och designers.</p></details>
+        <details><summary>10. Hur skapar jag en tillgänglighetspolicy?</summary><p>Skriv en kortfattad, tydlig policy som anger mål, ansvarsfördelning och processer för tillgänglighetsarbete.</p></details>
+        <details><summary>11. Hur budgeterar jag långsiktigt?</summary><p>Beräkna kostnaden för kontinuerliga tester, utbildning och verktyg som en årlig investering.</p></details>
+        <details><summary>12. Hur hanterar jag verksamhetsrisker?</summary><p>Gör regelbundna riskanalyser — både juridiska och operativa — kopplat till er digitala tjänsteportfölj.</p></details>
+        <details><summary>13. Hur kommunicerar jag vinster internt?</summary><p>Dela framgångshistorier från användartester och statistiska förbättringar i användarengagemang.</p></details>
+        <details><summary>14. Hur stämmer jag av med PTS?</summary><p>Ha löpande dialog kring er planerade utrullning och eventuella avvikelser eller undantag.</p></details>
+        <details><summary>15. Hur bedömer jag efterlevnad över tid?</summary><p>Använd versionskontroll och arkivera testprotokoll för att kunna jämföra status kvartalsvis.</p></details>
+        <details><summary>16. Hur hanterar jag policy-uppdateringar?</summary><p>Granska och revidera policyn årligen eller vid förändringar i WCAG eller lagstiftning.</p></details>
+        <details><summary>17. Hur engagerar jag ledningen?</summary><p>Presentera affärscase och riskanalyser på ledningsmöten för att få strategiskt stöd.</p></details>
+        <details><summary>18. Hur stämmer jag av verksamhetsmål?</summary><p>Koppla tillgänglighetsmål till era övergripande digitala och affärsmässiga KPI:er.</p></details>
+        <details><summary>19. Hur förbereder jag för extern revision?</summary><p>Samla all dokumentation, testresultat och policyer i ett strukturerat revisionspaket.</p></details>
+        <details><summary>20. Hur säkerställer jag kontinuerlig förbättring?</summary><p>Inför tillgänglighet som en fast punkt i varje sprintplanering och retrospektiv.</p></details>
+
+        <!-- Jurister -->
+        <h3>Jurister</h3>
+        <details><summary>1. Hur definieras “tillgänglighet” i lagen?</summary><p>Lagen (SFS 2023:254) refererar till WCAG 2.1 nivå AA för webbinnehåll och digitala tjänster.</p></details>
+        <details><summary>2. Vilka produkter omfattas?</summary><p>Webbplatser, mobilappar, dokument (PDF, Word) och liveevenemang med digitalt gränssnitt.</p></details>
+        <details><summary>3. Vilka aktörer omfattas?</summary><p>Offentlig sektor (myndigheter, kommuner, regioner) och privata företag som erbjuder tjänster till allmänheten.</p></details>
+        <details><summary>4. Vilka påföljder kan uppstå?</summary><p>PTS kan utfärda förelägganden, vite eller driva ärenden till förvaltningsrätt.</p></details>
+        <details><summary>5. Hur förhåller sig lagen till EU-direktiv?</summary><p>SFS 2023:254 implementerar EU-direktiv 2016/2102 om tillgänglighet i digital offentlig service.</p></details>
+        <details><summary>6. Finns undantag i lagen?</summary><p>Vissa historiska dokument och nödsystem kan undantas, men huvudregeln är full efterlevnad.</p></details>
+        <details><summary>7. Hur dokumenterar man efterlevnad?</summary><p>Spara testprotokoll, policyer och interna rapporter som bevis vid tillsyn.</p></details>
+        <details><summary>8. När krävs konsekvensutredning?</summary><p>Vid större ändringar i digitala tjänster bör en tillgänglighetskonsekvensutredning genomföras.</p></details>
+        <details><summary>9. Hur rapporterar man till PTS?</summary><p>Använd PTS webbaserade rapporteringsverktyg på lptt-rapportering.pts.se.</p></details>
+        <details><summary>10. Hur hanterar man rättstvister?</summary><p>Säkerställ att era processer dokumenteras noggrant och anlita specialiserad juridisk rådgivning.</p></details>
+        <details><summary>11. Hur tolkas “tillgänglighet” i domstol?</summary><p>Domstolar utgår från WCAG-kriterier och PTS rekommendationer vid bedömning av brister.</p></details>
+        <details><summary>12. Hur påverkas leverantörsavtal?</summary><p>Inför klausuler om tillgänglighet och sanktioner vid utebliven efterlevnad i era avtal.</p></details>
+        <details><summary>13. Hur hanterar man sekretess och tillgänglighet?</summary><p>Dokument som innehåller känslig information måste vara tillgängliga utan att kompromissa med sekretess.</p></details>
+        <details><summary>14. Hur förhåller sig GDPR till tillgänglighet?</summary><p>Information enligt GDPR måste vara läsbar och åtkomlig även för personer med funktionsvariationer.</p></details>
+        <details><summary>15. Hur gör man juridisk due diligence?</summary><p>Granska leverantörers tidigare efterlevnadshistorik och begär testprotokoll.</p></details>
+        <details><summary>16. Hur uppdaterar man policyer?</summary><p>Se över och revidera era interna riktlinjer samtidigt som lagstiftningen ändras.</p></details>
+        <details><summary>17. Hur hanterar man tvärjuridiska frågor?</summary><p>Samverka med avdelningar för IT-säkerhet, personuppgiftsskydd och inköp för helhetsperspektiv.</p></details>
+        <details><summary>18. Hur granskar man tredjepartsverktyg?</summary><p>Begär tillgänglighetstestprotokoll och certifieringar för varje integrerad komponent.</p></details>
+        <details><summary>19. Hur hanterar man force majeure?</summary><p>Lagen har ingen generell force majeure-klausul; avvikelser måste dokumenteras och rapporteras.</p></details>
+        <details><summary>20. Hur förbereder jag för ny lagstiftning?</summary><p>Följ PTS och Riksdagens uppdateringar och anpassa era interna processer löpande.</p></details>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="mb-5 text-center" style="font-family:'Nunito', sans-serif;">  
+      <h2 style="font-family:'DM Serif Display', serif;">Kontakt</h2>
+      <p>Har du frågor eller synpunkter? Mejla oss på <a href="mailto:hej@lptt.se">hej@lptt.se</a></p>
+    </section>
+
+    <!-- Om sajten -->
+    <section id="omsajten" class="mb-5" style="font-family:'Nunito', sans-serif;">
+      <h2 style="font-family:'DM Serif Display', serif;">Om sajten</h2>
+      <p>Denna sajt är skapad av <a href="https://www.linkedin.com/in/dittnamn" target="_blank" rel="noopener">Amin</a>, digital tillgänglighetsspecialist på Axess Lab i Stockholm.</p>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center py-3 border-top">
+    <div class="container" style="font-family:'Nunito', sans-serif;">
+      <p class="mb-0">&copy; 2025 LPTT. <a href="privacy.html">Integritetspolicy</a> | <a href="about.html">Om oss</a></p>
+      <small>Språk: <a href="/en/">EN</a> | <strong>SE</strong></small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
