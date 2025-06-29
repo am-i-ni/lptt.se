@@ -1,273 +1,149 @@
 <!DOCTYPE html>
-<html lang="sv" data-bs-theme="light">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Den nya tillgänglighetslagen – enkelt förklarad | LPTT</title>
-  <!-- Typsnitt -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Nunito', sans-serif; }
-    h1,h2,h3,h4,h5,h6 { font-family: 'DM Serif Display', serif; }
-    .skip-link { position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:100; }
-    .skip-link:focus { top:0; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-light text-dark">
   <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">LPTT</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+  <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">LPTT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+              aria-controls="navMenu" aria-expanded="false" aria-label="Visa meny">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+      <nav class="collapse navbar-collapse" id="navMenu" aria-label="Huvudmeny">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#korthet">Lagen i korthet</a></li>
           <li class="nav-item"><a class="nav-link" href="#omfattas">Vem omfattas</a></li>
           <li class="nav-item"><a class="nav-link" href="#obligationer">Obligationer</a></li>
           <li class="nav-item"><a class="nav-link" href="#tidsplan">Tidsplan</a></li>
           <li class="nav-item"><a class="nav-link" href="#resurser">Resurser</a></li>
+          <li class="nav-item"><a class="nav-link" href="#verktyg">Verktyg</a></li>
+          <li class="nav-item"><a class="nav-link" href="#processkarta">Processkarta</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#specifika">Specifika frågor</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakta oss</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          <li class="nav-item"><a class="nav-link" href="#omsajten">Om sajten</a></li>
         </ul>
-        <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Byt tema">🌙</button>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main id="main-content" class="container">
+  <main id="main-content" class="container py-5">
     <!-- Hero -->
-    <section class="bg-primary text-white text-center py-5 rounded mb-4">
-      <h1 class="display-4">Den nya tillgänglighetslagen – enkelt förklarad</h1>
-      <p class="lead">Förstå vad lagen innebär, vem som omfattas och vilka viktiga deadlines du behöver känna till.</p>
-      <a href="#korthet" class="btn btn-light mt-3">Kom igång</a>
+    <section class="text-center mb-5">
+      <h1 class="display-5" style="font-family:'DM Serif Display', serif;">Den nya tillgänglighetslagen – enkelt förklarad</h1>
+      <p class="lead" style="font-family:'Nunito', sans-serif;">Här förklarar vi vad lagen innebär, vem som omfattas och vilka deadlines som gäller.</p>
+      <a href="#korthet" class="btn btn-primary">Läs mer om lagen</a>
     </section>
 
     <!-- Lagen i korthet -->
     <section id="korthet" class="mb-5">
-      <h2>Lagen i korthet</h2>
-      <ul>
-        <li><strong>Syfte:</strong> Säkerställa digital tillgänglighet för personer med funktionsnedsättning.</li>
-        <li><strong>Tillämpningsområde:</strong> Webbplatser, mobilappar och digitala dokument för offentliga aktörer och vissa privata tjänster.</li>
-        <li><strong>Principer:</strong> Perceivable, Operable, Understandable, Robust (WCAG 2.1 AA).</li>
+      <h2 style="font-family:'DM Serif Display', serif;">Lagen i korthet</h2>
+      <ul style="font-family:'Nunito', sans-serif;">
+        <li>Syfte: Säkerställa digital tillgänglighet för alla användare.</li>
+        <li>Tillämpningsområde: Webbplatser, appar och digitala dokument.</li>
+        <li>Principer: Perceivable, Operable, Understandable, Robust.</li>
       </ul>
     </section>
 
     <!-- Vem omfattas -->
-    <section id="omfattas" class="mb-5 bg-light p-4 rounded">
-      <h2>Vem omfattas?</h2>
-      <div class="row g-3">
-        <div class="col-md-6"><div class="card p-3"><h3>Offentlig sektor</h3><p>Myndigheter, kommuner och regioner måste uppfylla lagen från 28 sept 2025.</p></div></div>
-        <div class="col-md-6"><div class="card p-3"><h3>Privata aktörer</h3><p>Företag som erbjuder viktiga digitala tjänster till allmänheten omfattas av lagen.</p></div></div>
+    <section id="omfattas" class="mb-5">
+      <h2 style="font-family:'DM Serif Display', serif;">Vem omfattas?</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4" style="font-family:'Nunito', sans-serif;">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Offentlig sektor</h3>
+              <p>Myndigheter, kommuner och regioner måste följa lagen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Privata aktörer</h3>
+              <p>Företag som erbjuder digitala tjänster till allmänheten omfattas.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Obligationer -->
     <section id="obligationer" class="mb-5">
-      <h2>Vad krävs?</h2>
-      <ul>
-        <li>Implementera och följ WCAG 2.1 AA för webbkontroll.</li>
-        <li>Säkerställ tillgänglighet i mobila appar och åtkomst till innehåll.</li>
-        <li>Gör digitala dokument (PDF, Word) strukturerade med rubriker, alt-texter med mera.</li>
-        <li>Erbjud stöd vid live-evenemang, t.ex. textning och hörslinga.</li>
-      </ul>
+      <h2 style="font-family:'DM Serif Display', serif;">Vad krävs av dig?</h2>
+      <div class="accordion" id="accordionObligationer" style="font-family:'Nunito', sans-serif;">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webbplatser">
+              Webbplatser
+            </button>
+          </h3>
+          <div id="webbplatser" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
+            <div class="accordion-body">
+              Se till att din webbplats uppfyller WCAG 2.1 nivå AA.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#applikationer">
+              Mobila appar
+            </button>
+          </h3>
+          <div id="applikationer" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
+            <div class="accordion-body">
+              Tillgänglighetsanpassade gränssnitt och läsbarhet.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dokument">
+              Dokument & PDF:er
+            </button>
+          </h3>
+          <div id="dokument" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
+            <div class="accordion-body">
+              Strukturerade rubriker, alt‐texter och läsbar layout.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#evenemang">
+              Live­evenemang
+            </button>
+          </h3>
+          <div id="evenemang" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
+            <div class="accordion-body">
+              Teknisk support för hörslinga och textning.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Tidsplan -->
-    <section id="tidsplan" class="mb-5 bg-light p-4 rounded">
-      <h2>Tidsplan & deadlines</h2>
-      <ul class="list-group">
-        <li class="list-group-item"><strong>28 sept 2025:</strong> Obligatoriskt för nya och helt ombyggda webbplatser och appar.</li>
-        <li class="list-group-item"><strong>30 juni 2028:</strong> Slutgiltig efterlevnad för alla befintliga tjänster.</li>
+    <!-- Tidsplan & deadlines -->
+    <section id="tidsplan" class="mb-5">
+      <h2 style="font-family:'DM Serif Display', serif;">Tidsplan & deadlines</h2>
+      <ul class="timeline list-unstyled" style="font-family:'Nunito', sans-serif;">
+        <li><strong>2025-09-28:</strong> Krav för nya webbplatser och uppdateringar.</li>
+        <li><strong>2028-06-30:</strong> Slutgiltig efterlevnad för befintliga tjänster.</li>
       </ul>
-      <a href="lptt-tidsplan.ics" class="btn btn-secondary mt-3">Ladda ner kalenderfil</a>
+      <a href="lptt-tidsplan.ics" class="btn btn-outline-secondary">Ladda ner kalenderfil</a>
     </section>
 
     <!-- Resurser & verktyg -->
     <section id="resurser" class="mb-5">
-      <h2>Resurser & verktyg</h2>
-      <ul>
-        <li><a href="https://svenskforfattningssamling.se/sfs/2023:254/" target="_blank" rel="noopener">SFS 2023:254 – Lagtext</a></li>
-        <li><a href="https://pts.se/digital-inkludering/lagen-om-vissa-produkters-och-tjansters-tillganglighet/" target="_blank" rel="noopener">PTS – Digital inkludering</a></li>
-        <li><a href="checklista.pdf">Checklista för tillgänglighet (PDF)</a></li>
-        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Accessibility Tool</a></li>
-      </ul>
-    </section>
-
-    <!-- Verktyg -->
-    <section id="verktyg" class="mb-5 bg-light p-4 rounded">
-      <h2>Verktyg</h2>
-      <ul>
-        <li><a href="https://lptt.pts.se/" target="_blank" rel="noopener">LPTT PTS Tillgänglighetstest</a></li>
-        <li><a href="https://lptt-rapportering.pts.se/" target="_blank" rel="noopener">LPTT PTS Rapportering</a></li>
-      </ul>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="mb-5">
-      <h2>Vanliga frågor</h2>
-      <div class="accordion" id="generalFaq">
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faq1Header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">Vad är WCAG?</button>
-          </h3>
-          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#generalFaq">
-            <div class="accordion-body">Web Content Accessibility Guidelines, internationell standard för digital tillgänglighet.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faq2Header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">När trädde lagen i kraft?</button>
-          </h3>
-          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#generalFaq">
-            <div class="accordion-body">Lagen publicerades 28 juni 2023 och gäller från 28 sept 2025 för nya tjänster.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Specifika frågor per målgrupp -->
-    <section id="specifika" class="mb-5">
-      <h2>Specifika frågor per målgrupp</h2>
-
-      <h3>Utvecklare</h3>
-      <div class="mb-3">
-        <details><summary>1. Vilka WCAG-kriterier är viktigast för formulär?</summary><p>WCAG 2.1—1.3.1 (Informationsstruktur), 3.3.2 (Etiketter eller instruktioner) och 3.3.1 (Felidentifiering) är centrala.</p></details>
-        <details><summary>2. Hur testar jag tangentbordsnavigering?</summary><p>Navigera utan mus med Tab, Skift+Tab, Enter och mellanslag; säkerställ att fokusindikator syns.</p></details>
-        <details><summary>3. Vilka ARIA-roller ska användas?</summary><p>role="button" för icke-button element, role="navigation" för menyer, role="alert" för felmeddelanden.</p></details>
-        <details><summary>4. Hur säkerställer jag kontrast i CSS?</summary><p>Använd kontrastförhållande minst 4.5:1 för text; testa med Contrast Checker.</p></details>
-        <details><summary>5. Hur hanterar jag dynamiskt innehåll?</summary><p>Använd <code>aria-live="polite"</code> eller <code>alert</code> för att informera skärmläsare.</p></details>
-        <details><summary>6. Hur strukturerar jag semantisk HTML?</summary><p>Använd <header>, <main>, <nav>, <article>, <section> och <footer>.</p></details>
-        <details><summary>7. Hur implementerar jag korrekt fokusorder?</summary><p>Säkerställ logisk <code>tabindex</code>-ordning, undvik <code>tabindex&gt;0</code>.</p></details>
-        <details><summary>8. Hur skriver jag alt-texter?</summary><p>Beskriv funktion och innehåll; dekorativa bilder alt="".</p></details>
-        <details><summary>9. Hur visar jag formulärfel?</summary><p>Använd <code>aria-describedby</code> som pekar på felmeddelandelement.</p></details>
-        <details><summary>10. Hur markerar jag språk?</summary><p>Ange <code>lang="sv"</code> i <html> eller per element med <code>lang</code>.</p></details>
-        <details><summary>11. Hur hanterar jag responsiva tabeller?</summary><p>Använd <code>overflow: auto</code> eller designa om till listvy på små skärmar.</p></details>
-        <details><summary>12. Ska jag använda JS-bibliotek?</summary><p>Bibliotek som ARIA-Widgets kan hjälpa men förstå standardprinciperna först.</p></details>
-        <details><summary>13. Hur testar jag med skärmläsare?</summary><p>Använd NVDA och VoiceOver löpande under utveckling.</p></details>
-        <details><summary>14. Hur hanterar jag modalfokus?</summary><p>Kör fokusfångst i modal och återställ efter stängning; använd <code>aria-modal="true"</code>.</p></details>
-        <details><summary>15. Hur optimerar jag prestanda?</summary><p>Minifiera resurser, använd kodsplittring och undvik onödiga scripts.</p></details>
-        <details><summary>16. Hur designer jag fokusindikator?</summary><p>Använd tydlig outline med hög kontrast.</p></details>
-        <details><summary>17. Hur dokumenterar jag beslut?</summary><p>Skapa tillgänglighetsrapport med WCAG-referenser och kodexempel.</p></details>
-        <details><summary>18. Hur versionerar efterlevnad?</summary><p>Anteckna i dokumentation: "WCAG 2.1 AA implementerad YYYY-MM-DD".</p></details>
-        <details><summary>19. Hur hanterar jag inbäddad media?</summary><p>Säkerställ undertexter, ljudbeskrivningar och transcripts.</p></details>
-        <details><summary>20. Hur integrerar jag i CI/CD?</summary><p>Kör Lighthouse eller Axe automatiskt i pipelinen vid varje build.</p></details>
-      </div>
-
-      <h3>Designers</h3>
-      <div class="mb-3">
-        <details><summary>1. Hur väljer jag färgscheman med god kontrast?</summary><p>Välj färgpar med minst 4.5:1 kontrast för text, testa med t ex Color Contrast Analyzer.</p></details>
-        <details><summary>2. Vilka typsnitt är mest läsbara?</summary><p>Sans-serif som Nunito, tydliga bokstavsformer, undvik dekorativa typsnitt.</p></details>
-        <details><summary>3. Hur designar jag för skärmläsare?</summary><p>Spegel semantisk HTML i design, använd beskrivande etiketter.</p></details>
-        <details><summary>4. Hur undviker jag färg som enda signal?</summary><p>Lägg till ikoner, text eller mönster vid felmeddelanden och status.</p></details>
-        <details><summary>5. Hur gör jag responsiv design tillgänglig?</summary><p>Flexibla layouter, skalbara typsnitt, tillräcklig padding.</p></details>
-        <details><summary>6. Hur säkerställer jag läsbar radlängd?</summary><p>50–75 tecken per rad är optimal radlängd för läsbarhet.</p></details>
-        <details><summary>7. Hur skapar jag visuella fokusindikatorer?</summary><p>Använd stark outline som kontrasterar mot bakgrund.</p></details>
-        <details><summary>8. Hur använder jag ikoner?</summary><p>Använd enkla, igenkännbara ikoner med textetiketter.</p></details>
-        <details><summary>9. Hur designar jag knappar?</summary><p>Tillräcklig storlek (min 44x44px), tydlig hover- och fokusstatus.</p></details>
-        <details><summary>10. Hur visar jag fel?</summary><p>Placera felmeddelanden nära fälten, använd färg + text.</p></details>
-        <details><summary>11. Hur hanterar jag animationer?</summary><p>Ge möjlighet att pausa/stoppa, håll dem kortfattade.</p></details>
-        <details><summary>12. Hur testar prototyper?</summary><p>Använd Figma med plugin för kontrastkontroll, använd prototype mode med semantik.</p></details>
-        <details><summary>13. Hur stödjer dark mode?</summary><p>Skapa omvänd kontrastpalett, testa färgmättnad och ljusstyrka.</p></details>
-        <details><summary>14. Hur skalar text?</summary><p>Använd rem-enheter, säkerställ upp till 200% zoom utan scroll.</p></details>
-        <details><summary>15. Hur stödjer zoom?</summary><p>Undvik horisontell scroll vid 200% zoom.</p></details>
-        <details><summary>16. Hur hanterar jag färgblindhet?</summary><p>Testa paletter med färgblindhetssimulatorer.</p></details>
-        <details><summary>17. Hur dokumenterar design?</summary><p>Underhåll designsystem med tillgänglighetsriktlinjer.</p></details>
-        <details><summary>18. Hur skapar flödesscheman?</summary><p>Använd textalternativ och enkla diagram.</p></details>
-        <details><summary>19. Hur hanterar jag typografihierarki?</summary><p>Konsekvent användning av H1–H6, stark visuell hierarki.</p></details>
-        <details><summary>20. Hur ger jag feedback?</summary><p>Ge strukturerad feedback med referenser till WCAG.</p></details>
-      </div>
-
-      <h3>Produktägare</h3>
-      <div class="mb-3">
-        <details><summary>1. Vad innebär lagen för produktstrategi?</summary><p>Inkludera tillgänglighet som krav i backlog och roadmap för att undvika sena ändringar och kostnader.</p></details>
-        <details><summary>2. Hur budgeterar vi för tester?</summary><p>Avsätt 10–15% av utvecklingsbudget för tillgänglighetstest och åtgärder.</p></details>
-        <details><summary>3. Vilka affärsfördelar finns?</summary><p>Ökad marknad, bättre UX, minskad risk för sanktioner enligt SFS 2023:254.</p></details>
-        <details><summary>4. Vilka risker vid icke-efterlevnad?</summary><p>Förelägganden, viten och negativ publicitet från PTS.</p></details>
-        <details><summary>5. Hur följer vi upp?</summary><p>Regelbundna revisioner, använd Lighthouse och Axe.</p></details>
-        <details><summary>6. Hur mäter ROI?</summary><p>Mät förbättrad konvertering, minskade supportkostnader.</p></details>
-        <details><summary>7. Vilka policyer behövs?</summary><p>Formell tillgänglighetspolicy med ansvar och riktlinjer.</p></details>
-        <details><summary>8. Hur utbildar teamet?</summary><p>Interna workshoppar, externa certifieringar (CPAAC).</p></details>
-        <details><summary>9. Hur säkerställer långsiktig efterlevnad?</summary><p>Integrera tester i CI/CD och releaseprocesser.</p></details>
-        <details><summary>10. Hur kommunicerar vi status?</summary><p>Skapa dashboard med tillgänglighetsmål och framsteg.</p></details>
-        <details><summary>11. Hur prioriterar buggar?</summary><p>Klassificera baserat på WCAG-nivå och användarpåverkan.</p></details>
-        <details><summary>12. Hur involverar vi användare?</summary><p>Inkludera personer med funktionsnedsättning i tester.</p></details>
-        <details><summary>13. Hur hanterar vi regulatoriska ändringar?</summary><p>Följ PTS uppdateringar och EU-direktiv, uppdatera roadmap.</p></details>
-        <details><summary>14. Hur förbättrar vi kontinuerligt?</summary><p>Återkommande retrospektiv och gemensamma mål för tillgänglighet.</p></details>
-        <details><summary>15. Hur budgeterar för utbildning?</summary><p>Inkludera utbildningskostnader i årlig budgetplan.</p></details>
-        <details><summary>16. Hur rapporterar ledningen?</summary><p>Månatliga rapporter med nyckeltal för tillgänglighet.</p></details>
-        <details><summary>17. Hur definierar vi succé?</summary><p>Mål som % WCAG-efterlevnad och användartillfredsställelse.</p></details>
-        <details><summary>18. Hur hanterar vi tredjepartskomponenter?</summary><p>Granska tredjepartsbibliotek mot WCAG-krav före användning.</p></details>
-        <details><summary>19. Hur skapar vi roadmap?</summary><p>Planera in iterationer för tillgänglighetsåtgärder tidigt.</p></details>
-        <details><summary>20. Hur säkerställer vi överordnat stöd?</summary><p>Involvera ledning och kommunicera affärsvärdet.</p></details>
-      </div>
-
-      <h3>Testare</h3>
-      <div class="mb-3">
-        <details><summary>1. Vilka verktyg passar för automatiserade tester?</summary><p>Axe, Pa11y och Lighthouse ger bra automatiska rapporter.</p></details>
-        <details><summary>2. Hur gör jag manuell test?</summary><p>Kontrollera fokus, tab-navigering, skärmläsarstöd och kontrast.</p></details>
-        <details><summary>3. Hur dokumenterar buggar?</summary><p>Ange WCAG-kriterie, steg för reproduktion och skärmdumpar.</p></details>
-        <details><summary>4. Hur rapporterar avvikelser?</summary><p>Använd PTS rapporteringsportal med referenser till SFS 2023:254.</p></details>
-        <details><summary>5. Vad ingår i rapport?</summary><p>Avvikelser, riskbedömning, rekommenderade åtgärder och tidplan.</p></details>
-        <details><summary>6. Hur prioriterar tester?</summary><p>Börja med kärnfunktioner och sidor med hög trafik.</p></details>
-        <details><summary>7. Hur testar jag responsivt?</summary><p>Använd olika viewportstorlekar och enheter.</p></details>
-        <details><summary>8. Hur testar jag med skärmläsare?</summary><p>NVDA på Windows och VoiceOver på macOS/iOS.</p></details>
-        <details><summary>9. Hur hanterar jag kontrastkontroll?</summary><p>Använd automatiserade verktyg plus manuella stickprov.</p></details>
-        <details><summary>10. Hur testar jag PDF-filer?</summary><p>Kontrollera semantik, alt-texter och läsbarhet i skärmläsare.</p></details>
-        <details><summary>11. Hur dokumenterar testfall?</summary><p>Beskriv scenario, förväntat resultat och faktisk utfall.</p></details>
-        <details><summary>12. Hur hanterar jag regressionstester?</summary><p>Använd automatiserade skript i CI för att testa tidigare testade sidor.</p></details>
-        <details><summary>13. Hur integrerar jag tester?</summary><p>Inkludera i sprint-definition-of-done.</p></details>
-        <details><summary>14. Hur rapporterar jag framgång?</summary><p>Mät minskade avvikelser över tid.</p></details>
-        <details><summary>15. Hur hanterar jag användares feedback?</summary><p>Samla in, kategorisera och prioritera förbättringar.</p></details>
-        <details><summary>16. Hur testar jag videoinnehåll?</summary><p>Kontrollera undertext och ljudbeskrivning.</p></details>
-        <details><summary>17. Hur hanterar jag zoom och textstorlek?</summary><p>Verifiera UI vid 200% zoom och skalad text.</p></details>
-        <details><summary>18. Hur hanterar jag komplexa komponenter?</summary><p>Testa WAI-ARIA, tabb-ordning och dynamic updates.</p></details>
-        <details><summary>19. Hur säkerställer jag kontinuerlig testning?</summary><p>Automatisera tester i varje bygg- och releaseprocess.</p></details>
-        <details><summary>20. Hur utvecklar jag testskript?</summary><p>Använd frameworks som Jest + axe-core för komponenttester.</p></details>
-      </div>
-
-      <h3>Chefer</h3>
-      <div class="mb-3">
-        <details><summary>1. Hur integrerar vi tillgänglighet i kulturen?</summary><p>Utbildning, policyer och ledningens engagemang är nyckeln.</p></details>
-        <details><summary>2. Hur mäter ROI?</summary><p>Mät ökad användarnöjdhet, konvertering och minskad supportkostnad.</p></details>
-        <details><summary>3. Vilka policyer behövs?</summary><p>Tillgänglighetspolicy, kodgranskningar och godkännandeprocesser.</p></details>
-        <details><summary>4. Hur utbildar vi?</summary><p>Workshops, e-learning och certifieringsprogram.</p></details>
-        <details><summary>5. Hur säkerställer långsiktighet?</summary><p>Inför QA-gates med tillgänglighetstester i varje release.</p></details>
-        <details><summary>6. Hur rapporterar ledningen?</summary><p>Månatliga rapporter med status på tillg`](trimmed)
-
-    <!-- Kontakt -->
-    <section id="kontakt" class="mb-5">
-      <h2>Kontakta oss</h2>
-      <p>Har du frågor eller behöver stöd? Kontakta oss gärna via e-post: <a href="mailto:hej@lptt.se">hej@lptt.se</a>.</p>
-    </section>
-
-    <!-- Om sajten -->
-    <section id="om-sajten" class="mb-5 bg-light p-4 rounded">
-      <h2>Om sajten</h2>
-      <p>Den här sidan är skapad av <a href="https://www.linkedin.com/in/amin" target="_blank" rel="noopener">Amin</a>, digital tillgänglighetsspecialist och CPAAC-certifierad av IAAP, för att ge en enkel och tillgänglig förklaring av den nya tillgänglighetslagen.</p>
-    </section>
-
-  </main>
-
-  <footer class="text-center py-3 bg-light">
-    <small>&copy; 2025 LPTT | <a href="#">Integritetspolicy</a> | <a href="#">Om oss</a></small>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-      const html = document.documentElement;
-      const theme = html.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-bs-theme', theme);
-      this.textContent = theme === 'light' ? '🌙' : '☀️';
-    });
-  </script>
-</body>
-</html>
+      <h2 style="font-family:'DM Serif Display', serif;">Resurser & verktyg</h2>
+      <ul style="font-family:'Nunito', sans-serif;">
+        <li><a href="https://www.myndighet.se/" target="_blank" rel="noopener">Myndigheten för digital förvaltning</a></li>
+        <li><a href="checklista.pdf">
