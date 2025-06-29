@@ -135,27 +135,122 @@
     <!-- Specifika frågor per målgrupp -->
     <section id="specifika" class="mb-5">
       <h2>Specifika frågor per målgrupp</h2>
-      <!-- innehåll oförändrat -->
-    </section>
+
+      <h3>Utvecklare</h3>
+      <div class="mb-3">
+        <details><summary>1. Vilka WCAG-kriterier är viktigast för formulär?</summary><p>WCAG 2.1—1.3.1 (Informationsstruktur), 3.3.2 (Etiketter eller instruktioner) och 3.3.1 (Felidentifiering) är centrala.</p></details>
+        <details><summary>2. Hur testar jag tangentbordsnavigering?</summary><p>Navigera utan mus med Tab, Skift+Tab, Enter och mellanslag; säkerställ att fokusindikator syns.</p></details>
+        <details><summary>3. Vilka ARIA-roller ska användas?</summary><p>role="button" för icke-button element, role="navigation" för menyer, role="alert" för felmeddelanden.</p></details>
+        <details><summary>4. Hur säkerställer jag kontrast i CSS?</summary><p>Använd kontrastförhållande minst 4.5:1 för text; testa med Contrast Checker.</p></details>
+        <details><summary>5. Hur hanterar jag dynamiskt innehåll?</summary><p>Använd <code>aria-live="polite"</code> eller <code>alert</code> för att informera skärmläsare.</p></details>
+        <details><summary>6. Hur strukturerar jag semantisk HTML?</summary><p>Använd <header>, <main>, <nav>, <article>, <section> och <footer>.</p></details>
+        <details><summary>7. Hur implementerar jag korrekt fokusorder?</summary><p>Säkerställ logisk <code>tabindex</code>-ordning, undvik <code>tabindex&gt;0</code>.</p></details>
+        <details><summary>8. Hur skriver jag alt-texter?</summary><p>Beskriv funktion och innehåll; dekorativa bilder alt="".</p></details>
+        <details><summary>9. Hur visar jag formulärfel?</summary><p>Använd <code>aria-describedby</code> som pekar på felmeddelandelement.</p></details>
+        <details><summary>10. Hur markerar jag språk?</summary><p>Ange <code>lang="sv"</code> i <html> eller per element med <code>lang</code>.</p></details>
+        <details><summary>11. Hur hanterar jag responsiva tabeller?</summary><p>Använd <code>overflow: auto</code> eller designa om till listvy på små skärmar.</p></details>
+        <details><summary>12. Ska jag använda JS-bibliotek?</summary><p>Bibliotek som ARIA-Widgets kan hjälpa men förstå standardprinciperna först.</p></details>
+        <details><summary>13. Hur testar jag med skärmläsare?</summary><p>Använd NVDA och VoiceOver löpande under utveckling.</p></details>
+        <details><summary>14. Hur hanterar jag modalfokus?</summary><p>Kör fokusfångst i modal och återställ efter stängning; använd <code>aria-modal="true"</code>.</p></details>
+        <details><summary>15. Hur optimerar jag prestanda?</summary><p>Minifiera resurser, använd kodsplittring och undvik onödiga scripts.</p></details>
+        <details><summary>16. Hur designer jag fokusindikator?</summary><p>Använd tydlig outline med hög kontrast.</p></details>
+        <details><summary>17. Hur dokumenterar jag beslut?</summary><p>Skapa tillgänglighetsrapport med WCAG-referenser och kodexempel.</p></details>
+        <details><summary>18. Hur versionerar efterlevnad?</summary><p>Anteckna i dokumentation: "WCAG 2.1 AA implementerad YYYY-MM-DD".</p></details>
+        <details><summary>19. Hur hanterar jag inbäddad media?</summary><p>Säkerställ undertexter, ljudbeskrivningar och transcripts.</p></details>
+        <details><summary>20. Hur integrerar jag i CI/CD?</summary><p>Kör Lighthouse eller Axe automatiskt i pipelinen vid varje build.</p></details>
+      </div>
+
+      <h3>Designers</h3>
+      <div class="mb-3">
+        <details><summary>1. Hur väljer jag färgscheman med god kontrast?</summary><p>Välj färgpar med minst 4.5:1 kontrast för text, testa med t ex Color Contrast Analyzer.</p></details>
+        <details><summary>2. Vilka typsnitt är mest läsbara?</summary><p>Sans-serif som Nunito, tydliga bokstavsformer, undvik dekorativa typsnitt.</p></details>
+        <details><summary>3. Hur designar jag för skärmläsare?</summary><p>Spegel semantisk HTML i design, använd beskrivande etiketter.</p></details>
+        <details><summary>4. Hur undviker jag färg som enda signal?</summary><p>Lägg till ikoner, text eller mönster vid felmeddelanden och status.</p></details>
+        <details><summary>5. Hur gör jag responsiv design tillgänglig?</summary><p>Flexibla layouter, skalbara typsnitt, tillräcklig padding.</p></details>
+        <details><summary>6. Hur säkerställer jag läsbar radlängd?</summary><p>50–75 tecken per rad är optimal radlängd för läsbarhet.</p></details>
+        <details><summary>7. Hur skapar jag visuella fokusindikatorer?</summary><p>Använd stark outline som kontrasterar mot bakgrund.</p></details>
+        <details><summary>8. Hur använder jag ikoner?</summary><p>Använd enkla, igenkännbara ikoner med textetiketter.</p></details>
+        <details><summary>9. Hur designar jag knappar?</summary><p>Tillräcklig storlek (min 44x44px), tydlig hover- och fokusstatus.</p></details>
+        <details><summary>10. Hur visar jag fel?</summary><p>Placera felmeddelanden nära fälten, använd färg + text.</p></details>
+        <details><summary>11. Hur hanterar jag animationer?</summary><p>Ge möjlighet att pausa/stoppa, håll dem kortfattade.</p></details>
+        <details><summary>12. Hur testar prototyper?</summary><p>Använd Figma med plugin för kontrastkontroll, använd prototype mode med semantik.</p></details>
+        <details><summary>13. Hur stödjer dark mode?</summary><p>Skapa omvänd kontrastpalett, testa färgmättnad och ljusstyrka.</p></details>
+        <details><summary>14. Hur skalar text?</summary><p>Använd rem-enheter, säkerställ upp till 200% zoom utan scroll.</p></details>
+        <details><summary>15. Hur stödjer zoom?</summary><p>Undvik horisontell scroll vid 200% zoom.</p></details>
+        <details><summary>16. Hur hanterar jag färgblindhet?</summary><p>Testa paletter med färgblindhetssimulatorer.</p></details>
+        <details><summary>17. Hur dokumenterar design?</summary><p>Underhåll designsystem med tillgänglighetsriktlinjer.</p></details>
+        <details><summary>18. Hur skapar flödesscheman?</summary><p>Använd textalternativ och enkla diagram.</p></details>
+        <details><summary>19. Hur hanterar jag typografihierarki?</summary><p>Konsekvent användning av H1–H6, stark visuell hierarki.</p></details>
+        <details><summary>20. Hur ger jag feedback?</summary><p>Ge strukturerad feedback med referenser till WCAG.</p></details>
+      </div>
+
+      <h3>Produktägare</h3>
+      <div class="mb-3">
+        <details><summary>1. Vad innebär lagen för produktstrategi?</summary><p>Inkludera tillgänglighet som krav i backlog och roadmap för att undvika sena ändringar och kostnader.</p></details>
+        <details><summary>2. Hur budgeterar vi för tester?</summary><p>Avsätt 10–15% av utvecklingsbudget för tillgänglighetstest och åtgärder.</p></details>
+        <details><summary>3. Vilka affärsfördelar finns?</summary><p>Ökad marknad, bättre UX, minskad risk för sanktioner enligt SFS 2023:254.</p></details>
+        <details><summary>4. Vilka risker vid icke-efterlevnad?</summary><p>Förelägganden, viten och negativ publicitet från PTS.</p></details>
+        <details><summary>5. Hur följer vi upp?</summary><p>Regelbundna revisioner, använd Lighthouse och Axe.</p></details>
+        <details><summary>6. Hur mäter ROI?</summary><p>Mät förbättrad konvertering, minskade supportkostnader.</p></details>
+        <details><summary>7. Vilka policyer behövs?</summary><p>Formell tillgänglighetspolicy med ansvar och riktlinjer.</p></details>
+        <details><summary>8. Hur utbildar teamet?</summary><p>Interna workshoppar, externa certifieringar (CPAAC).</p></details>
+        <details><summary>9. Hur säkerställer långsiktig efterlevnad?</summary><p>Integrera tester i CI/CD och releaseprocesser.</p></details>
+        <details><summary>10. Hur kommunicerar vi status?</summary><p>Skapa dashboard med tillgänglighetsmål och framsteg.</p></details>
+        <details><summary>11. Hur prioriterar buggar?</summary><p>Klassificera baserat på WCAG-nivå och användarpåverkan.</p></details>
+        <details><summary>12. Hur involverar vi användare?</summary><p>Inkludera personer med funktionsnedsättning i tester.</p></details>
+        <details><summary>13. Hur hanterar vi regulatoriska ändringar?</summary><p>Följ PTS uppdateringar och EU-direktiv, uppdatera roadmap.</p></details>
+        <details><summary>14. Hur förbättrar vi kontinuerligt?</summary><p>Återkommande retrospektiv och gemensamma mål för tillgänglighet.</p></details>
+        <details><summary>15. Hur budgeterar för utbildning?</summary><p>Inkludera utbildningskostnader i årlig budgetplan.</p></details>
+        <details><summary>16. Hur rapporterar ledningen?</summary><p>Månatliga rapporter med nyckeltal för tillgänglighet.</p></details>
+        <details><summary>17. Hur definierar vi succé?</summary><p>Mål som % WCAG-efterlevnad och användartillfredsställelse.</p></details>
+        <details><summary>18. Hur hanterar vi tredjepartskomponenter?</summary><p>Granska tredjepartsbibliotek mot WCAG-krav före användning.</p></details>
+        <details><summary>19. Hur skapar vi roadmap?</summary><p>Planera in iterationer för tillgänglighetsåtgärder tidigt.</p></details>
+        <details><summary>20. Hur säkerställer vi överordnat stöd?</summary><p>Involvera ledning och kommunicera affärsvärdet.</p></details>
+      </div>
+
+      <h3>Testare</h3>
+      <div class="mb-3">
+        <details><summary>1. Vilka verktyg passar för automatiserade tester?</summary><p>Axe, Pa11y och Lighthouse ger bra automatiska rapporter.</p></details>
+        <details><summary>2. Hur gör jag manuell test?</summary><p>Kontrollera fokus, tab-navigering, skärmläsarstöd och kontrast.</p></details>
+        <details><summary>3. Hur dokumenterar buggar?</summary><p>Ange WCAG-kriterie, steg för reproduktion och skärmdumpar.</p></details>
+        <details><summary>4. Hur rapporterar avvikelser?</summary><p>Använd PTS rapporteringsportal med referenser till SFS 2023:254.</p></details>
+        <details><summary>5. Vad ingår i rapport?</summary><p>Avvikelser, riskbedömning, rekommenderade åtgärder och tidplan.</p></details>
+        <details><summary>6. Hur prioriterar tester?</summary><p>Börja med kärnfunktioner och sidor med hög trafik.</p></details>
+        <details><summary>7. Hur testar jag responsivt?</summary><p>Använd olika viewportstorlekar och enheter.</p></details>
+        <details><summary>8. Hur testar jag med skärmläsare?</summary><p>NVDA på Windows och VoiceOver på macOS/iOS.</p></details>
+        <details><summary>9. Hur hanterar jag kontrastkontroll?</summary><p>Använd automatiserade verktyg plus manuella stickprov.</p></details>
+        <details><summary>10. Hur testar jag PDF-filer?</summary><p>Kontrollera semantik, alt-texter och läsbarhet i skärmläsare.</p></details>
+        <details><summary>11. Hur dokumenterar testfall?</summary><p>Beskriv scenario, förväntat resultat och faktisk utfall.</p></details>
+        <details><summary>12. Hur hanterar jag regressionstester?</summary><p>Använd automatiserade skript i CI för att testa tidigare testade sidor.</p></details>
+        <details><summary>13. Hur integrerar jag tester?</summary><p>Inkludera i sprint-definition-of-done.</p></details>
+        <details><summary>14. Hur rapporterar jag framgång?</summary><p>Mät minskade avvikelser över tid.</p></details>
+        <details><summary>15. Hur hanterar jag användares feedback?</summary><p>Samla in, kategorisera och prioritera förbättringar.</p></details>
+        <details><summary>16. Hur testar jag videoinnehåll?</summary><p>Kontrollera undertext och ljudbeskrivning.</p></details>
+        <details><summary>17. Hur hanterar jag zoom och textstorlek?</summary><p>Verifiera UI vid 200% zoom och skalad text.</p></details>
+        <details><summary>18. Hur hanterar jag komplexa komponenter?</summary><p>Testa WAI-ARIA, tabb-ordning och dynamic updates.</p></details>
+        <details><summary>19. Hur säkerställer jag kontinuerlig testning?</summary><p>Automatisera tester i varje bygg- och releaseprocess.</p></details>
+        <details><summary>20. Hur utvecklar jag testskript?</summary><p>Använd frameworks som Jest + axe-core för komponenttester.</p></details>
+      </div>
+
+      <h3>Chefer</h3>
+      <div class="mb-3">
+        <details><summary>1. Hur integrerar vi tillgänglighet i kulturen?</summary><p>Utbildning, policyer och ledningens engagemang är nyckeln.</p></details>
+        <details><summary>2. Hur mäter ROI?</summary><p>Mät ökad användarnöjdhet, konvertering och minskad supportkostnad.</p></details>
+        <details><summary>3. Vilka policyer behövs?</summary><p>Tillgänglighetspolicy, kodgranskningar och godkännandeprocesser.</p></details>
+        <details><summary>4. Hur utbildar vi?</summary><p>Workshops, e-learning och certifieringsprogram.</p></details>
+        <details><summary>5. Hur säkerställer långsiktighet?</summary><p>Inför QA-gates med tillgänglighetstester i varje release.</p></details>
+        <details><summary>6. Hur rapporterar ledningen?</summary><p>Månatliga rapporter med status på tillg`](trimmed)
 
     <!-- Kontakt -->
     <section id="kontakt" class="mb-5">
       <h2>Kontakta oss</h2>
-      <form action="mailto:hej@lptt.se" method="post" enctype="text/plain">
-        <div class="mb-3">
-          <label for="name" class="form-label">Namn</label>
-          <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">E-post</label>
-          <input type="email" id="email" name="email" class="form-control" value="hej@lptt.se" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Meddelande</label>
-          <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Skicka</button>
-      </form>
+      <p>Har du frågor eller behöver stöd? Kontakta oss gärna via e-post: <a href="mailto:hej@lptt.se">hej@lptt.se</a>.</p>
+    </section>
+
+    <!-- Om sajten -->
+    <section id="om-sajten" class="mb-5 bg-light p-4 rounded">
+      <h2>Om sajten</h2>
+      <p>Den här sidan är skapad av <a href="https://www.linkedin.com/in/amin" target="_blank" rel="noopener">Amin</a>, digital tillgänglighetsspecialist och CPAAC-certifierad av IAAP, för att ge en enkel och tillgänglig förklaring av den nya tillgänglighetslagen.</p>
     </section>
 
   </main>
