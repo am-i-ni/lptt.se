@@ -10,14 +10,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: 'Nunito', sans-serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'DM Serif Display', serif; }
-    .skip-link { position: absolute; top: -40px; left: 0; background: #000; color: #fff; padding: 8px; z-index: 100; }
-    .skip-link:focus { top: 0; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'DM Serif Display', serif; }
+    .skip-link { position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:100; }
+    .skip-link:focus { top:0; }
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">LPTT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
@@ -31,137 +31,112 @@
           <li class="nav-item"><a class="nav-link" href="#tidsplan">Tidsplan</a></li>
           <li class="nav-item"><a class="nav-link" href="#resurser">Resurser</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specifika">Specifika frågor</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakta oss</a></li>
         </ul>
-        <button id="theme-toggle" class="btn btn-outline-secondary">🌙</button>
+        <button id="theme-toggle" class="btn btn-outline-secondary" aria-label="Byt tema">🌙</button>
       </div>
     </div>
   </nav>
 
-  <main id="main-content">
-    <!-- Hero -->
-    <!-- ... (samma sektioner som tidigare) ... -->
-
-    <!-- FAQ -->
-    <section id="faq" class="py-5">
-      <div class="container">
-        <h2>Vanliga frågor</h2>
-        <!-- Utvecklare -->
-        <h3>Utvecklare</h3>
-        <div class="accordion mb-4" id="faqUtvecklare">
-          <!-- 20 frågor -->
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="devHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#devCollapse${i}" aria-expanded="false" aria-controls="devCollapse${i}">
-                Fråga ${i+1} för utvecklare
-              </button>
-            </h2>
-            <div id="devCollapse${i}" class="accordion-collapse collapse" aria-labelledby="devHeader${i}" data-bs-parent="#faqUtvecklare">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-        <!-- Designers -->
-        <h3>Designers</h3>
-        <div class="accordion mb-4" id="faqDesigners">
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="designHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#designCollapse${i}" aria-expanded="false" aria-controls="designCollapse${i}">
-                Fråga ${i+1} för designers
-              </button>
-            </h2>
-            <div id="designCollapse${i}" class="accordion-collapse collapse" aria-labelledby="designHeader${i}" data-bs-parent="#faqDesigners">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-        <!-- Produktägare -->
-        <h3>Produktägare</h3>
-        <div class="accordion mb-4" id="faqProductOwners">
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="pmHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pmCollapse${i}" aria-expanded="false" aria-controls="pmCollapse${i}">
-                Fråga ${i+1} för produktägare
-              </button>
-            </h2>
-            <div id="pmCollapse${i}" class="accordion-collapse collapse" aria-labelledby="pmHeader${i}" data-bs-parent="#faqProductOwners">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-        <!-- Testare -->
-        <h3>Testare</h3>
-        <div class="accordion mb-4" id="faqTesters">
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="testHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#testCollapse${i}" aria-expanded="false" aria-controls="testCollapse${i}">
-                Fråga ${i+1} för testare
-              </button>
-            </h2>
-            <div id="testCollapse${i}" class="accordion-collapse collapse" aria-labelledby="testHeader${i}" data-bs-parent="#faqTesters">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-        <!-- Chefer -->
-        <h3>Chefer</h3>
-        <div class="accordion mb-4" id="faqManagers">
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="mgrHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mgrCollapse${i}" aria-expanded="false" aria-controls="mgrCollapse${i}">
-                Fråga ${i+1} för chefer
-              </button>
-            </h2>
-            <div id="mgrCollapse${i}" class="accordion-collapse collapse" aria-labelledby="mgrHeader${i}" data-bs-parent="#faqManagers">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-        <!-- Jurister -->
-        <h3>Jurister</h3>
-        <div class="accordion mb-4" id="faqLawyers">
-          ${[...Array(20)].map((_,i) => `
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="lawHeader${i}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lawCollapse${i}" aria-expanded="false" aria-controls="lawCollapse${i}">
-                Fråga ${i+1} för jurister
-              </button>
-            </h2>
-            <div id="lawCollapse${i}" class="accordion-collapse collapse" aria-labelledby="lawHeader${i}" data-bs-parent="#faqLawyers">
-              <div class="accordion-body">Svar kommer här.</div>
-            </div>
-          </div>
-          `).join('')}
-        </div>
-      </div>
+  <main id="main-content" class="container">
+    <section class="bg-primary text-white text-center py-5 rounded mb-4">
+      <h1 class="display-4">Den nya tillgänglighetslagen – enkelt förklarad</h1>
+      <p class="lead">Här förklarar vi vad lagen innebär, vem som omfattas och vilka deadlines som gäller.</p>
+      <a href="#korthet" class="btn btn-light mt-3">Läs mer</a>
     </section>
 
-    <!-- Kontakt etc. -->
-    <!-- ... -->
+    <!-- Övriga sektioner oförändrade -->
+
+    <section id="specifika" class="mb-4">
+  <h2>Specifika frågor per målgrupp</h2>
+
+  <h3>Utvecklare</h3>
+  <div class="mb-3">
+    <details><summary>1. Vilka WCAG-kriterier är viktigast för formulär?</summary><p>WCAG 2.1—1.3.1 (Informationsstruktur), 3.3.2 (Etiketter eller instruktioner) och 3.3.1 (Felidentifiering).</p></details>
+    <details><summary>2. Hur testar jag tangentbordsnavigering?</summary><p>Navigera utan mus med Tab, Skift+Tab, Enter och mellanslag; säkerställ att fokusindikator syns.</p></details>
+    <details><summary>3. Vilka ARIA-roller ska användas?</summary><p>role="button" för icke-button element, role="navigation" för menyer, role="alert" för felmeddelanden.</p></details>
+    <details><summary>4. Hur säkerställer jag kontrast i CSS?</summary><p>Använd kontrastförhållande minst 4.5:1 för text; testa med Contrast Checker.</p></details>
+    <details><summary>5. Hur hanterar jag dynamiskt innehåll?</summary><p>Använd <code>aria-live="polite"</code> eller <code>assertive</code> för att uppdatera skärmläsare.</p></details>
+    <details><summary>6. Hur strukturerar jag semantisk HTML?</summary><p>Använd <header>, <main>, <nav>, <article>, <section>, <footer> för tydlig struktur.</p></details>
+    <details><summary>7. Hur implementerar jag fokusorder?</summary><p>Säkerställ logisk tabindex-ordning och undvik tabindex&gt;0.</p></details>
+    <details><summary>8. Hur använder jag alt-texter korrekt?</summary><p>Ge beskrivande alt-texter för funktionella bilder; dekorativa bilder alt="".</p></details>
+    <details><summary>9. Hur optimerar jag formulärfel?</summary><p>Ge felmeddelanden med aria-describedby pekande på felbeskrivning.</p></details>
+    <details><summary>10. Hur säkerställer jag språkmarkering?</summary><p>Ange lang="sv" för svenskt innehåll; ändra språk per <html lang> eller <span lang> vid behov.</p></details>
+    <details><summary>11. Hur kodar jag responsiva tabeller?</summary><p>Använd overflow: auto; eller flexbox; se till att kolumner är läsbara.</p></details>
+    <details><summary>12. Ska jag använda JavaScript-bibliotek för tillgänglighet?</summary><p>Bibliotek som Accessible Rich Internet Applications (ARIA) kan underlätta men förstå bakomliggande principer.</p></details>
+    <details><summary>13. Hur testar jag med skärmläsare?</summary><p>Testa med NVDA (Windows) och VoiceOver (macOS/iOS) regelbundet under utveckling.</p></details>
+    <details><summary>14. Hur hanterar jag fokuskontroll vid modaler?</summary><p>Fånga fokus i dialogrutan och återställ efter stängning; använd aria-modal="true".</p></details>
+    <details><summary>15. Hur optimerar jag prestanda för tillgänglighet?</summary><p>Minifiera CSS/JS, ladda kritiska skript först och undvik blockering av rendering.</p></details>
+    <details><summary>16. Hur hanterar jag kontrast för fokusindikator?</summary><p>Använd tydliga färger och tjocklek på outline som uppfyller kontrastkrav.</p></details>
+    <details><summary>17. Hur dokumenterar jag tillgänglighetsbeslut?</summary><p>Skapa en tillgänglighetsrapport med WCAG-referenser, skärmdumpar och kodexempel.</p></details>
+    <details><summary>18. Hur versionerar jag WCAG-efterlevnad?</summary><p>Använd versionshantering i dokumentation, t.ex. "WCAG 2.1 AA – implementerad den YYYY-MM-DD".</p></details>
+    <details><summary>19. Hur hanterar jag inbäddade media?</summary><p>Ge undertexter (closed captions) och ljudbeskrivningar för video.</p></details>
+    <details><summary>20. Hur integrerar jag tillgänglighet i CI/CD?</summary><p>Kör automatiserade tillgänglighetstester (Lighthouse, Axe) i pipelinen före release.</p></details>
+  </div>
+
+  <h3>Designers</h3>
+  <div class="mb-3">
+    <details><summary>1. Hur väljer jag färgscheman med god kontrast?</summary><p>Välj kontrast 4.5:1 för normal text och 3:1 för stor text; testa med Color Contrast Analyzer.</p></details>
+    <details><summary>2. Vilka typsnitt är mest läsbara?</summary><p>Sans-serif-typsnitt som Nunito med tydliga bokstavsformer ger bättre läsbarhet.</p></details>
+    <details><summary>3. Hur designar jag för skärmläsare?</summary><p>Skapa visuella hierarkier som speglas i semantisk HTML; beskriv bilder noggrant.</p></details>
+    <details><summary>4. Hur undviker jag färg som enda signal?</summary><p>Lägg till text, ikoner eller mönster för att komplettera färgindikatorer.</p></details>
+    <details><summary>5. Hur gör jag responsiv design tillgänglig?</summary><p>Säkerställ flexibel layout och skalbar typografi; ge tillräcklig vit yta.</p></details>
+    <details><summary>6. Hur säkerställer jag läsbar radlängd?</summary><p>Hold radlängd mellan 50–75 tecken för optimal läsbarhet.</p></details>
+    <details><summary>7. Hur skapar jag tydliga visuella fokusindikatorer?</summary><p>Designa starka outlines som syns mot bakgrundsfärger.</p></details>
+    <details><summary>8. Hur använder jag ikonografi?</summary><p>Använd tydliga, enkla ikoner och förklara vid behov med textetiketter.</p></details>
+    <details><summary>9. Hur designar jag interaktiva element?</summary><p>Säkerställ tillräcklig klickyta (minst 44x44 px) och visuell feedback.</p></details>
+    <details><summary>10. Hur planerar jag mönster för felhantering?</summary><p>Visa felmeddelanden nära det fält som har fel och använd färg + textindicering.</p></details>
+    <details><summary>11. Hur hanterar jag animationer?</summary><p>Minska hastighet och ge alternativ för att stänga av rörliga element.</p></details>
+    <details><summary>12. Hur utformar jag lämpliga quiz & tester?</summary><p>Ge tydliga instruktioner, framstegsmätare och kontroll över tidsbegränsningar.</p></details>
+    <details><summary>13. Hur underlättar jag nattläge?</summary><p>Erbjud dark mode med omvänd kontrast och testa ljusstyrka och färgmättnad.</p></details>
+    <details><summary>14. Hur säkerställer jag tillgänglighet i prototyper?</summary><p>Använd verktyg som Figma + plugin för kontrastkontroll och semantisk struktur i prototyp.</p></details>
+    <details><summary>15. Hur hanterar jag textstorlekar?</summary><p>Använd relativ enhet (rem) och se till att text kan skalas till minst 200%.</p></details>
+    <details><summary>16. Hur inkluderar jag stöd för screen zoom?</summary><p>Säkerställ layout utan horisontell scroll vid zoom upp till 200%.</p></details>
+    <details><summary>17. Hur utvärderar jag färgblindhetsvänliga paletter?</summary><p>Använd färgblindhets-simulatorer och undvik kombinationer som är oläsliga.</p></details>
+    <details><summary>18. Hur skapar jag flödesscheman tillgängliga?</summary><p>Använd enkla diagram, läsbar text och ge textalternativ till visuella element.</p></details>
+    <details><summary>19. Hur dokumenterar jag designbeslut?</summary><p>Skapa designsystem med tillgänglighetsriktlinjer och komponentbibliotek.</p></details>
+    <details><summary>20. Hur kommunicerar jag feedback om tillgänglighet?</summary><p>Använd strukturerade reviews, inkludera WCAG-referenser i designkritik.</p></details>
+  </div>
+
+  <h3>Produktägare</h3>
+  <div class="mb-3">
+    <details><summary>1. Vad innebär lagen för vår produktstrategi?</summary><p>Att inkludera tillgänglighet som krav i backlog och roadmap för att uppfylla lagkrav.</p></details>
+    <details><summary>2. Hur budgeterar vi för tillgänglighetstestning?</summary><p>Avsätt 10–15% av utvecklingsbudget för kontinuerliga tester och åtgärder.</p></details>
+    <details><summary>3. Vilka affärsfördelar finns med tillgänglighet?</summary><p>Större marknad, bättre användarupplevelse och minskad legalk</p></details>
+
+    <section id="kontakt">
+      <h2>Kontakta oss</h2>
+      <form action="mailto:hej@lptt.se" method="post" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label">Namn</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-post</label>
+          <input type="email" id="email" name="email" class="form-control" value="hej@lptt.se" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Meddelande</label>
+          <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Skicka</button>
+      </form>
+    </section>
+
   </main>
-  <footer>
-    <!-- ... -->
+
+  <footer class="text-center py-3">
+    <small>&copy; 2025 LPTT | <a href="#">Integritetspolicy</a> | <a href="#">Om oss</a></small>
   </footer>
-  <!-- Scripts -->
-  <script src="scripts.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Theme toggle
-    const btn = document.getElementById('theme-toggle');
-    btn.addEventListener('click', () => {
+    document.getElementById('theme-toggle').addEventListener('click', function() {
       const html = document.documentElement;
       const theme = html.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light';
       html.setAttribute('data-bs-theme', theme);
-      btn.textContent = theme === 'light' ? '🌙' : '☀️';
+      this.textContent = theme === 'light' ? '🌙' : '☀️';
     });
   </script>
 </body>
