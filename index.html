@@ -7,6 +7,103 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* 1. Reset och box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap');
+
+/* 3. Grundinställningar */
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa; /* Ljust tema */
+}
+
+/* 4. Rubriker */
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* 5. Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 6. Header & footer */
+header.navbar,
+footer {
+  background-color: #ffffff;
+}
+
+/* 7. Knappar */
+.btn-primary {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* 8. Fokusindikator */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* 9. Skip-link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* 10. Accordion */
+.accordion .accordion-button {
+  background: #eee;
+}
+.accordion .accordion-body {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* 11. Tidslinje (timeline) */
+.timeline {
+  list-style: none;
+}
+.timeline li + li {
+  margin-top: 0.5rem;
+}
+
+/* 12. Footer-text */
+footer .container p,
+footer .container small {
+  margin: 0;
+}
+</style>
 </head>
 <body class="bg-light text-dark">
 <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
