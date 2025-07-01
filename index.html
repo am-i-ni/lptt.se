@@ -1,470 +1,888 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Allt om LPTT: lagen om vissa produkters och tjänsters tillgänglighet</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-
-/* 2. Reset och box-sizing */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* 3. Grundinställningar */
-body {
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa; /* Ljust tema */
-}
-
-
-
-/* 5. Layout */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* 6. Header & footer */
-header.navbar,
-footer {
-  background-color: #ffffff;
-}
-
-/* 7. Knappar */
-.btn-primary {
-  background-color: #0066cc;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* 8. Fokusindikator */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 2px;
-}
-
-/* 9. Skip-link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 1000;
-}
-.skip-link:focus {
-  top: 0;
-}
-
-/* 10. Accordion */
-.accordion .accordion-button {
-  background: #eee;
-}
-.accordion .accordion-body {
-  padding: 0.5rem 1rem;
-  border-top: 1px solid #ccc;
-}
-
-/* 11. Tidslinje (timeline) */
-.timeline {
-  list-style: none;
-}
-.timeline li + li {
-  margin-top: 0.5rem;
-}
-
-/* 12. Footer-text */
-footer .container p,
-footer .container small {
-  margin: 0;
-}
-
-details {
-  margin-bottom: 2rem;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPTT.se - Lagen om vissa produkter och tjänsters tillgänglighet</title>
+    <meta name="description" content="En guide till lagen om vissa produkter och tjänsters tillgänglighet (LPTT) och hur den påverkar olika roller inom digitala produkter och tjänster.">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-light text-dark">
-<a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+<body>
+    <!-- Skipplänk -->
+    <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
 
-<header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-<div class="container">
-<a class="navbar-brand fw-bold" href="/">Allt om LPTT</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
-aria-controls="navMenu" aria-expanded="false" aria-label="Visa meny">
-<span class="navbar-toggler-icon"></span>
-</button>
-<nav class="collapse navbar-collapse" id="navMenu" aria-label="Huvudmeny">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#korthet">Lagen i korthet</a></li>
-<li class="nav-item"><a class="nav-link" href="#omfattas">Vem omfattas</a></li>
-<li class="nav-item"><a class="nav-link" href="#ansvar">Ansvar</a></li>
-<li class="nav-item"><a class="nav-link" href="#tidsplan">Tidsplan</a></li>
-<li class="nav-item"><a class="nav-link" href="#verktyg">Verktyg</a></li>
-<li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-<li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
-<li class="nav-item"><a class="nav-link" href="#om">Om sajten</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#" class="logo-link">LPTT.se</a>
+                </div>
+                <nav class="nav" aria-label="Huvudnavigation">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                        <span class="sr-only">Öppna meny</span>
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#lagen" class="nav-link">Lagen i korthet</a></li>
+                        <li><a href="#omfattas" class="nav-link">Vem omfattas</a></li>
+                        <li><a href="#skillnader" class="nav-link">Skillnader</a></li>
+                        <li><a href="#verktyg" class="nav-link">Verktyg</a></li>
+                        <li><a href="#roller" class="nav-link">För olika roller</a></li>
+                        <li><a href="#faq" class="nav-link">Frågor & Svar</a></li>
+                        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<main id="main-content" class="container py-5">
-<!-- Hero -->
-<section class="text-center mb-5">
-<h1 class="display-5">Den nya tillgänglighetslagen LPTT – enkelt förklarad</h1>
-<p class="lead">Här förklarar vi vad lagen innebär, vem som omfattas och vilka deadlines som gäller.</p>
-<a href="#korthet" class="btn btn-primary">Läs mer om tillgänglighetslagen LPTT</a>
-</section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Lagen om vissa produkter och tjänsters tillgänglighet</h1>
+                    <p class="hero-description">
+                        En tydlig guide till LPTT – lagen som säkerställer att digitala produkter och tjänster är tillgängliga för alla.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#lagen" class="btn btn-primary">Läs mer om lagen</a>
+                        <a href="#roller" class="btn btn-secondary">För olika roller</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="korthet" class="mb-5">
-  <h2>Lagen i korthet</h2>
+        <!-- Lagen i korthet -->
+        <section id="lagen" class="section">
+            <div class="container">
+                <h2 class="section-title">Lagen i korthet</h2>
+                <p class="section-intro">
+                    Lagen om vissa produkter och tjänsters tillgänglighet (LPTT) är en svensk lag som bygger på EU:s tillgänglighetsdirektiv. Syftet är att säkerställa att digitala produkter och tjänster är tillgängliga för alla användare, oavsett funktionsförmåga.
+                </p>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 class="card-title">Syfte</h3>
+                        <p class="card-content">
+                            Lagen säkerställer att digitala produkter och tjänster är tillgängliga för alla användare, oavsett funktionsförmåga.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Krav</h3>
+                        <p class="card-content">
+                            Digitala tjänster ska uppfylla WCAG 2.1 nivå AA och följa principerna om uppfattningsbarhet, hanterbarhet, begriplighet och robusthet.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Övervakning</h3>
+                        <p class="card-content">
+                            Post- och telestyrelsen (PTS) kontrollerar efterlevnad och kan kräva korrigerande åtgärder eller utfärda viten vid brister.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Tidsplan</h3>
+                        <p class="card-content">
+                            Nya och ombyggda digitala tjänster ska vara tillgängliga senast 28 september 2025. Övriga tjänster senast 30 juni 2028.
+                        </p>
+                    </div>
+                </div>
 
-  <h3>Syfte</h3>
-  <p>
-    Lagen säkerställer att digitala produkter och tjänster är tillgängliga för alla användare, oavsett funktionsförmåga.
-  </p>
+                <div class="text-center">
+                    <a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-20231107-om-tillganglighet-till-produkter_sfs-2023-1107" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline">
+                        📄 Läs lagtexten
+                        <span class="sr-only">(öppnas i nytt fönster)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <h3>Vem omfattas?</h3>
-  <p>
-    Lagen gäller för aktörer som erbjuder digitala produkter eller tjänster till konsumenter. Detta inkluderar:
-  </p>
-  <ul>
-    <li>Offentliga myndigheter (myndigheter, kommuner, regioner) för deras externa webbplatser och appar.</li>
-    <li>Privata företag som riktar sina digitala tjänster till allmänheten.</li>
-  </ul>
+        <!-- Vem omfattas -->
+        <section id="omfattas" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Vem omfattas av lagen?</h2>
+                <p class="section-intro">
+                    Lagen gäller för aktörer som erbjuder digitala produkter eller tjänster till konsumenter. Detta inkluderar:
+                </p>
 
-  <h3>Krav</h3>
-  <p>
-    Alla digitala tjänster ska uppfylla WCAG 2.1 nivå AA. Viktiga områden att fokusera på är:
-  </p>
-  <ul>
-    <li>Tydlig rubrikstruktur och läsbar text.</li>
-    <li>Minst 4.5:1 kontrast mellan text och bakgrund.</li>
-    <li>Tangentbordsnavigering och tydliga fokusindikatorer.</li>
-    <li>Alternativa texter för bilder och media.</li>
-  </ul>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 class="card-title">Offentlig sektor</h3>
+                        <ul class="card-list">
+                            <li>Myndigheter</li>
+                            <li>Kommuner</li>
+                            <li>Regioner</li>
+                            <li>Offentligt finansierade organisationer</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Privata aktörer</h3>
+                        <ul class="card-list">
+                            <li>E-handelsplattformar</li>
+                            <li>Banktjänster</li>
+                            <li>Streamingtjänster</li>
+                            <li>Mobilapplikationer</li>
+                            <li>Andra digitala tjänster riktade till allmänheten</li>
+                        </ul>
+                    </div>
+                </div>
 
-  <h3>Övervakning</h3>
-  <p>
-    PTS kontrollerar efterlevnad och kan kräva korrigerande åtgärder eller utfärda viten vid brister.
-  </p>
+                <div class="highlight-box">
+                    <h3>Produkter och tjänster som omfattas</h3>
+                    <ul class="highlight-list">
+                        <li>Datorer och operativsystem</li>
+                        <li>Bankomater och betalterminaler</li>
+                        <li>E-böcker och läsplattor</li>
+                        <li>E-handelstjänster</li>
+                        <li>Banktjänster för konsumenter</li>
+                        <li>Digitala böcker och e-läsare</li>
+                        <li>Persontransporttjänster</li>
+                        <li>Mobilapplikationer relaterade till dessa tjänster</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <h3>Tidsplan</h3>
-  <p>
-    Nya och ombyggda digitala tjänster ska vara tillgängliga senast 28 september 2025.
-    Övriga tjänster senast 30 juni 2028.
-  </p>
-</section>
+        <!-- Skillnader mellan lagar -->
+        <section id="skillnader" class="section">
+            <div class="container">
+                <h2 class="section-title">Skillnader mellan tillgänglighetslagar</h2>
+                <p class="section-intro">
+                    Det finns flera lagar och standarder som berör digital tillgänglighet. Här är de viktigaste skillnaderna:
+                </p>
 
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <caption class="sr-only">Jämförelse mellan olika tillgänglighetslagar och standarder</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Lag/Standard</th>
+                                <th scope="col">Omfattning</th>
+                                <th scope="col">Krav</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">LPTT</th>
+                                <td>Offentliga och privata digitala produkter och tjänster för konsumenter</td>
+                                <td>WCAG 2.1 AA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DOS-lagen</th>
+                                <td>Offentliga webbplatser och appar</td>
+                                <td>WCAG 2.1 AA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">WCAG 2.1</th>
+                                <td>Webbinnehåll</td>
+                                <td>Riktlinjer i nivåer A, AA, AAA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">WCAG 2.2</th>
+                                <td>Webbinnehåll (uppdaterad version)</td>
+                                <td>Riktlinjer i nivåer A, AA, AAA med nya krav</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">EN 301 549</th>
+                                <td>Europeisk standard för tillgänglighet</td>
+                                <td>Inkluderar WCAG plus ytterligare krav</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-<!-- Vem omfattas -->
-<section id="omfattas" class="mb-5">
-<h2>Vem omfattas?</h2>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-<div class="col">
-<div class="card h-100">
-<div class="card-body">
-<h3 class="card-title">Offentlig sektor</h3>
-<p>Myndigheter, kommuner och regioner måste följa lagen.</p>
-</div>
-</div>
-</div>
-<div class="col">
-<div class="card h-100">
-<div class="card-body">
-<h3 class="card-title">Privata aktörer</h3>
-<p>Företag som erbjuder digitala tjänster till allmänheten omfattas.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+                <div class="highlight-box">
+                    <h3>Viktiga länkar</h3>
+                    <ul class="link-list">
+                        <li>
+                            <a href="https://www.pts.se/sv/bransch/internet/tillganglighetsdirektivet/" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                🔗 Post- och telestyrelsens information om tillgänglighetsdirektivet
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-20231107-om-tillganglighet-till-produkter_sfs-2023-1107" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                🔗 Lagtexten för LPTT
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/WCAG21/" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                🔗 WCAG 2.1 riktlinjer
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/WCAG22/" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                🔗 WCAG 2.2 riktlinjer
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<!-- Ansvar -->
-<section id="ansvar" class="mb-5">
-<h2>Vad krävs av dig?</h2>
-<div class="accordion" id="accordionObligationer">
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webbplatser">
-Webbplatser
-</button>
-</h3>
-<div id="webbplatser" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
-<div class="accordion-body">
-Se till att din webbplats uppfyller WCAG 2.1 nivå AA.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#applikationer">
-Mobila appar
-</button>
-</h3>
-<div id="applikationer" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
-<div class="accordion-body">
-Tillgänglighetsanpassade gränssnitt och läsbarhet.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dokument">
-Dokument & PDF:er
-</button>
-</h3>
-<div id="dokument" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
-<div class="accordion-body">
-Strukturerade rubriker, alt‐texter och läsbar layout.
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#evenemang">
-Live­evenemang
-</button>
-</h3>
-<div id="evenemang" class="accordion-collapse collapse" data-bs-parent="#accordionObligationer">
-<div class="accordion-body">
-Teknisk support för hörslinga och textning.
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- Verktyg -->
+        <section id="verktyg" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Viktiga verktyg</h2>
+                <p class="section-intro">
+                    För att säkerställa att dina digitala produkter och tjänster uppfyller tillgänglighetskraven finns flera användbara verktyg:
+                </p>
 
-<!-- Tidsplan & deadlines -->
-<section id="tidsplan" class="mb-5">
-<h2>Tidsplan & deadlines</h2>
-<ul class="timeline list-unstyled">
-<li><strong>2025-09-28:</strong> Krav för nya webbplatser och uppdateringar.</li>
-<li><strong>2028-06-30:</strong> Slutgiltig efterlevnad för befintliga tjänster.</li>
-</ul>
-</section>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 class="card-title">Automatiserade testverktyg</h3>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 WAVE
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Identifierar tillgänglighetsproblem direkt i webbsidor</p>
+                            </div>
+                            <div class="tool-item">
+                                <a href="https://www.deque.com/axe/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 axe DevTools
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Webbläsartillägg för tillgänglighetstestning</p>
+                            </div>
+                            <div class="tool-item">
+                                <a href="https://accessibilityinsights.io/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 Accessibility Insights
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Verktyg från Microsoft för att testa tillgänglighet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Manuella testverktyg</h3>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <a href="https://www.nvaccess.org/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 NVDA
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Gratis skärmläsare för Windows</p>
+                            </div>
+                            <div class="tool-item">
+                                <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 Lighthouse
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Inbyggt i Chrome för att testa tillgänglighet</p>
+                            </div>
+                            <div class="tool-item">
+                                <a href="https://colororacle.org/" target="_blank" rel="noopener noreferrer" class="tool-link">
+                                    🔗 Color Oracle
+                                    <span class="sr-only">(öppnas i nytt fönster)</span>
+                                </a>
+                                <p class="tool-description">Simulerar färgblindhet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Verktyg (PTS) -->
-<section id="verktyg" class="mb-5">
-<h2>Verktyg från PTS</h2>
-<ul>
-<li><a href="https://lptt.pts.se/" >Testa tillgänglighet – PTS LPTT</a></li>
-<li><a href="https://lptt-rapportering.pts.se/">Rapportera avvikelser – PTS LPTT Rapportering</a></li>
-</ul>
-</section>
+                <div class="highlight-box">
+                    <h3>Checklistor och resurser</h3>
+                    <ul class="link-list">
+                        <li>
+                            <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener noreferrer">
+                                🔗 WCAG 2.1 Snabbreferens
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.a11yproject.com/checklist/" target="_blank" rel="noopener noreferrer">
+                                🔗 A11y Project Checklist
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.digg.se/kunskap-och-stod/digital-tillganglighet/tillganglig-kod" target="_blank" rel="noopener noreferrer">
+                                🔗 DIGG:s guide till tillgänglig kod
+                                <span class="sr-only">(öppnas i nytt fönster)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <!-- För olika roller -->
+        <section id="roller" class="section">
+            <div class="container">
+                <h2 class="section-title">För olika roller</h2>
+                <p class="section-intro">
+                    Tillgänglighet är ett lagarbete där olika roller har olika ansvar. Här hittar du specifik information för din roll:
+                </p>
 
-<!-- Lagar och riktlinjer -->
-<section id="riktlinjer-och-lagar" class="mb-5">
+                <div class="tabs">
+                    <div class="tab-list" role="tablist" aria-label="Information för olika roller">
+                        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="produktagare-panel" id="produktagare-tab">
+                            Produktägare
+                        </button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="designers-panel" id="designers-tab">
+                            Designers
+                        </button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="utvecklare-panel" id="utvecklare-tab">
+                            Utvecklare
+                        </button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="testare-panel" id="testare-tab">
+                            Testare
+                        </button>
+                    </div>
 
-<h2>Hur EU-lagen, LPTT, WCAG och EN 301 549 relaterar till varandra</h2>
-<ul>
-<li>
-<strong>EU-direktiv (EU 2016/2102)</strong><br>
-Sätter minimikraven för tillgänglighet i hela Europa och kräver att medlemsstaterna implementerar dem i nationell lag.
-</li>
-<li>
-<strong>SFS 2023:254 (“EU-lagen”)</strong><br>
-Den svenska implementeringen av EU-direktivet. Gäller för webbplatser, appar och digitala dokument i offentlig och viss privat verksamhet.
-</li>
-<li>
-<strong>WCAG 2.1</strong><br>
-Webbstandarder framtagna av W3C. EU-lagen hänvisar direkt till WCAG 2.1 nivå AA som mål om digital tillgänglighet.
-</li>
-<li>
-<strong>EN 301 549</strong><br>
-Europeisk standard som specificerar tekniska krav (inklusive WCAG) och testmetoder för digital tillgänglighet. Stödjer en enhetlig tolkning inom EU.
-</li>
-<li>
-<strong>PTS LPTT</strong><br>
-Svenska myndighetens webbtjänst för att <em>testa</em> (lptt.pts.se) och <em>rapportera</em> (lptt-rapportering.pts.se) avvikelser mot kraven i SFS 2023:254, WCAG och EN 301 549.
-</li>
-</ul>
+                    <!-- Produktägare -->
+                    <div class="tab-panel active" role="tabpanel" id="produktagare-panel" aria-labelledby="produktagare-tab">
+                        <div class="card">
+                            <h3 class="card-title">För produktägare</h3>
+                            <p class="card-subtitle">Så integrerar du tillgänglighet i produktstrategin</p>
+                            
+                            <div class="role-section">
+                                <h4>Ditt ansvar</h4>
+                                <p>Som produktägare har du ansvar för att säkerställa att tillgänglighet prioriteras genom hela produktutvecklingsprocessen, från planering till lansering.</p>
+                                <ul>
+                                    <li>Inkludera tillgänglighetskrav i produktspecifikationer</li>
+                                    <li>Avsätta resurser för tillgänglighetstestning</li>
+                                    <li>Säkerställa att tillgänglighet är en del av definition of done</li>
+                                    <li>Förstå affärsnyttan med tillgänglighet</li>
+                                </ul>
+                            </div>
 
-</section>
+                            <div class="role-section">
+                                <h4>Viktiga verktyg</h4>
+                                <ul>
+                                    <li>Tillgänglighetsbudget i projektplanen</li>
+                                    <li>Användarundersökningar med personer med funktionsnedsättningar</li>
+                                    <li>Tillgänglighetspolicy för organisationen</li>
+                                </ul>
+                            </div>
 
+                            <div class="role-section">
+                                <h4>Läs mer</h4>
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://www.w3.org/WAI/planning/" target="_blank" rel="noopener noreferrer">
+                                            🔗 W3C: Planera och hantera tillgänglighet
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.w3.org/WAI/business-case/" target="_blank" rel="noopener noreferrer">
+                                            🔗 Affärsnyttan med tillgänglighet
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-<!-- FAQ med alla frågor och svar -->
-<section id="faq" class="mb-5">
-<h2>Vanliga frågor (FAQ)</h2>
-<div>
-<!-- Utvecklare -->
-<h3>Utvecklare</h3>
-<!-- 20 Utvecklarfrågor -->
-<details><summary>1. Vad är WCAG?</summary><p>Web Content Accessibility Guidelines (WCAG) är riktlinjer framtagna av W3C för att göra webbinnehåll mer tillgängligt för personer med funktionsnedsättningar.</p></details>
-<details><summary>2. Vilka WCAG-nivåer gäller enligt lagen?</summary><p>Lagen kräver minst WCAG 2.1 nivå AA för webbplatser, appar och dokument. Vissa grundläggande krav (nivå A) måste alltid uppfyllas.</p></details>
-<details><summary>3. Hur kontrollerar jag färgkontrast?</summary><p>Använd verktyg som WAVE eller Axe för att mäta kontrastförhållanden mot WCAG-krav (minst 4.5:1 för brödtext). Säkerställ att alla text- och UI-element klarar testet.</p></details>
-<details><summary>4. Hur implementerar jag ARIA-roller korrekt?</summary><p>Använd semantiska HTML-element i första hand, och komplettera med ARIA-attribut endast där det behövs för att beskriva UI-komponenter som annars inte är semantiska.</p></details>
-<details><summary>5. Hur märker jag upp formulärfält?</summary><p>Använd <code>&lt;label&gt;</code> kopplat till <code>input</code> via <code>for</code>/<code>id</code>. Lägg till <code>aria-describedby</code> för beskrivningar och felmeddelanden.</p></details>
-<details><summary>6. Hur skriver jag alt-text för bilder?</summary><p>Beskriv kortfattat och meningsfullt vad bilden förmedlar. Lämna <code>alt=""</code> på dekorativa bilder så att skärmläsare hoppar över dem.</p></details>
-<details><summary>7. Hur hanterar jag tidsbaserade medier?</summary><p>Erbjud textning för videor och transkribering av ljud. Ge användaren kontroller för paus, stopp och volym.</p></details>
-<details><summary>8. Hur säkerställer jag tangentbordsnavigering?</summary><p>Se till att alla interaktiva element är tillgängliga via <code>Tab</code> och ha synliga fokusindikatorer (<code>:focus</code>). Implementera en “skip to content”-länk.</p></details>
-<details><summary>9. Hur testar jag med skärmläsare?</summary><p>Använd gratisverktyg som NVDA eller VoiceOver. Navigera hela flödet med tangentbordet och kontrollera att informationen läses upp i korrekt ordning.</p></details>
-<details><summary>10. Hur använder jag semantiska element?</summary><p>Använd <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> och <code>&lt;footer&gt;</code> för att strukturera sidan. Det underlättar både för användare och hjälpmedel.</p></details>
-<details><summary>11. Hur säkerställer jag responsiv design?</summary><p>Använd flexbox eller CSS Grid och %-/em-enheter istället för fasta pixlar. Testa i olika skärmstorlekar och med förstorade vyer.</p></details>
-<details><summary>12. Hur tar jag hänsyn till användarens preferenser för animation?</summary><p>Respektera <code>prefers-reduced-motion</code> i CSS för att minska eller ta bort onödiga animationer.</p></details>
-<details><summary>13. Hur hanterar jag felmeddelanden?</summary><p>Använd <code>role="alert"</code> eller <code>aria-live="assertive"</code> på felmeddelanden så att skärmläsare uppmärksammas direkt.</p></details>
-<details><summary>14. Hur strukturerar jag rubriker?</summary><p>Följ hierarkin H1→H2→H3 osv. Hoppa inte nivåer och se till att varje avsnitt har en tydlig rubrik.</p></details>
-<details><summary>15. Hur hanterar jag språkändringar?</summary><p>Ange <code>lang="sv"</code> för svenskt innehåll och <code>lang="en"</code> för engelskt. För enstaka ord: <code>&lt;span lang="en"&gt;…&lt;/span&gt;</code>.</p></details>
-<details><summary>16. Hur validerar jag kontinuerligt tillgänglighet?</summary><p>Integrera automatiska tester (t.ex. Axe-CLI) i er CI/CD-pipeline för att fånga fel tidigt.</p></details>
-<details><summary>17. Hur spårar jag tillgänglighetsproblem?</summary><p>Använd ert buggrapporteringssystem (JIRA, GitHub Issues) med etiketter som <code>accessibility</code> för att hålla koll på ärenden.</p></details>
-<details><summary>18. Hur dokumenterar jag tillgänglighetsarbete?</summary><p>Skapa en sektion i er kodbas- eller komponent-dokumentation där ni beskriver hur varje komponent uppfyller WCAG-kraven.</p></details>
-<details><summary>19. Hur utbildar jag andra utvecklare?</summary><p>Håll korta, återkommande workshops och dela checklistor för vanliga tillgänglighetsåtgärder.</p></details>
-<details><summary>20. Hur stöder jag mörkt/ljust läge?</summary><p>Använd CSS-variabler och <code>prefers-color-scheme</code> för att byta mellan kontrastschema utan att ändra markup.</p></details>
+                            <div class="faq-section">
+                                <h4>Vanliga frågor för produktägare</h4>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur mycket extra tid bör jag budgetera för tillgänglighet?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Om tillgänglighet integreras från början behöver det inte ta mycket extra tid. Räkna med 10-15% extra i början, men detta minskar när teamet blir mer vant.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilka är de vanligaste misstagen produktägare gör gällande tillgänglighet?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Att se tillgänglighet som en "extra funktion" eller något som kan läggas till i slutet av projektet. Tillgänglighet bör vara en integrerad del av hela utvecklingsprocessen.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur prioriterar jag tillgänglighetskrav?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Börja med WCAG 2.1 A-kriterier, följt av AA. Prioritera krav som påverkar stora användargrupper eller är lagstadgade.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur mäter jag ROI för tillgänglighetsarbete?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Mät ökad användarbas, minskad supportkostnad, förbättrad SEO, och minskad risk för rättsliga åtgärder.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            När behöver jag anlita tillgänglighetsexperter?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Vid projektstart för att sätta upp riktlinjer, vid större designbeslut, och för att genomföra granskningar innan lansering.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Designers -->
-<h3>Designers</h3>
-<details><summary>1. Hur planerar jag färgscheman med god kontrast?</summary><p>Använd verktyg som Contrast Checker (WebAIM) för att säkerställa minst 4.5:1 kontrast mellan text och bakgrund.</p></details>
-<details><summary>2. Vilka typsnitt fungerar bäst för läsbarhet?</summary><p>Sans-serif-typsnitt som Nunito är bra för brödtext, och serif-typsnitt som DM Serif Display passar rubriker.</p></details>
-<details><summary>3. Hur skapar jag tydliga fokusindikatorer?</summary><p>Använd en synlig ram eller bakgrundsfärgsskiftning som skiljer sig tydligt från designen vid <code>:focus</code>.</p></details>
-<details><summary>4. Hur designar jag formulärfält?</summary><p>Ge varje fält tillräcklig storlek, tydlig label och generöst mellanrum. Visa felmeddelanden i anslutning till fälten.</p></details>
-<details><summary>5. Hur hanterar jag ikon-användning?</summary><p>Ge varje ikon en <code>aria-hidden="true"</code> om den är dekorativ, och använd text eller <code>aria-label</code> om den är funktionell.</p></details>
-<details><summary>6. Hur gör jag wireframes tillgängliga?</summary><p>Skissa tidigt på kontrast, rubrikhierarki och navigationsflöden med hjälp av komponentbibliotek som redan är WCAG-testade.</p></details>
-<details><summary>7. Hur visualiserar jag flöden för skärmläsaranvändare?</summary><p>Ta med noteringar om sekventiell läsordning och ARIA-roller i dina mockups.</p></details>
-<details><summary>8. Hur utvärderar jag kognitiv tillgänglighet?</summary><p>Använd enkelt språk, bryt upp text i korta stycken och undvik överdriven animation.</p></details>
-<details><summary>9. Hur prototypar jag med tillgänglighet?</summary><p>Använd verktyg som Figma-plugin:ar för kontrastkontroll och skapa interaktiva prototyper med tangentbordsnavigering.</p></details>
-<details><summary>10. Hur skapar jag konsistenta komponenter?</summary><p>Bygg ett design­system där varje komponent dokumenteras med tillgänglighetsanvisningar (fokus, ARIA, färg).</p></details>
-<details><summary>11. Hur testar jag användbarhet med hjälpmedel?</summary><p>Genomför tidiga användartester med personer som använder skärmläsare eller förlitar sig på tangentbord.</p></details>
-<details><summary>12. Hur säkerställer jag läsbarhet vid förstoring?</summary><p>Designa med relativ typografi (em/rem) och testa i t.ex. 200 % zoom.</p></details>
-<details><summary>13. Hur hanterar jag responsiva breakpoints?</summary><p>Testa designen i små, medelstora och stora vyer—säkra att inga element försvinner utanför viewport.</p></details>
-<details><summary>14. Hur utformar jag tydliga knappar?</summary><p>Använd generösa klickområden (minst 44×44 px) och tydlig textlabel, inte bara ikon.</p></details>
-<details><summary>15. Hur inkluderar jag visuella hjälpmedel?</summary><p>Använd infografik och diagram med tydliga etiketter, alt-texter och beskrivningar i text.</p></details>
-<details><summary>16. Hur kommunicerar jag tillgänglighetsprinciper i teamet?</summary><p>Skapa kortfattade “design tokens” och checklistor som enkelt kan användas i design­verktyg.</p></details>
-<details><summary>17. Hur anpassar jag animationer för användare?</summary><p>Ge användaren möjlighet att stänga av animationer eller sänka hastighet via <code>prefers-reduced-motion</code>.</p></details>
-<details><summary>18. Hur gör jag komplex data tillgänglig?</summary><p>Använd tabeller med korrekt <code>&lt;thead&gt;</code>/<code>&lt;tbody&gt;</code> och beskrivningstext före datat.</p></details>
-<details><summary>19. Hur utvärderar jag kontrast i mockups?</summary><p>Använd färgkontrast­plugin i Figma eller Adobe XD för att se till att alla element klarar AA-kravet.</p></details>
-<details><summary>20. Hur förbereder jag styleguides för utvecklingsteamet?</summary><p>Inkludera kodexempel, ARIA-anvisningar och designspecar för varje komponent i ert styleguide­dokument.</p></details>
+                    <!-- Designers -->
+                    <div class="tab-panel" role="tabpanel" id="designers-panel" aria-labelledby="designers-tab">
+                        <div class="card">
+                            <h3 class="card-title">För designers</h3>
+                            <p class="card-subtitle">Så skapar du tillgängliga designlösningar</p>
+                            
+                            <div class="role-section">
+                                <h4>Ditt ansvar</h4>
+                                <p>Som designer har du ansvar för att skapa gränssnitt som är tillgängliga för alla användare, oavsett funktionsförmåga.</p>
+                                <ul>
+                                    <li>Säkerställa tillräcklig kontrast mellan text och bakgrund</li>
+                                    <li>Designa för olika inmatningsmetoder (mus, tangentbord, röst)</li>
+                                    <li>Skapa tydliga fokustillstånd för tangentbordsnavigering</li>
+                                    <li>Använda tydliga och konsekventa designmönster</li>
+                                </ul>
+                            </div>
 
-<!-- Produktägare -->
-<h3>Produktägare</h3>
-<details><summary>1. Vad innebär lagen för vår produkt?</summary><p>Alla digitala tjänster som erbjuds till allmänheten måste uppfylla WCAG 2.1 AA-krav enligt SFS 2023:254.</p></details>
-<details><summary>2. Vilka deadlines gäller?</summary><p>Från 28 september 2025 måste nya tjänster vara tillgänglighetsanpassade; befintliga senast 30 juni 2028.</p></details>
-<details><summary>3. Hur budgeterar jag tillgänglighetsarbete?</summary><p>Räkna in tid för granskning, utveckling, test och dokumentation i varje sprintplanering.</p></details>
-<details><summary>4. Hur prioriterar jag funktioner utifrån tillgänglighet?</summary><p>Gruppera krav i “måste”, “bör” och “kan” enligt fonden i lagen och använd WCAG-checklistan som mall.</p></details>
-<details><summary>5. Hur mäter jag efterlevnad?</summary><p>Använd automatiska verktyg och manuella tester, samt involvera användare med funktionsnedsättning i acceptanstester.</p></details>
-<details><summary>6. Hur rapporterar jag status internt?</summary><p>Skapa en dashboard med öppna ärenden, testresultat och procentuell täckning mot WCAG-nivå AA.</p></details>
-<details><summary>7. Hur involverar jag intressenter?</summary><p>Kommunicera regelbundet via demos och rapporter hur tillgänglighetsarbetet går och vilka vinster det ger.</p></details>
-<details><summary>8. Hur hanterar jag risker kring försenad leverans?</summary><p>Identifiera kritiska åtgärder tidigt och se till att kompetens och resurser finns på plats innan deadline.</p></details>
-<details><summary>9. Hur följer jag upp avvikelser mot PTS?</summary><p>Rapportera enligt PTS rutiner via LPTT-rapportering och åtgärda avvikelser inom rimlig tid.</p></details>
-<details><summary>10. Hur utbildar jag teamet i lagen?</summary><p>Anordna workshops med extern expert (t.ex. Axess Lab) och använd PTS e-lärning.</p></details>
-<details><summary>11. Hur väljer jag leverantörer med rätt kompetens?</summary><p>Kräv certifiering (t.ex. CPACC) eller tidigare referenser på väl implementerad tillgänglighet.</p></details>
-<details><summary>12. Hur säkerställer jag kontinuerlig förbättring?</summary><p>Inför retrospektivpunkter specifikt för tillgänglighet vid varje sprintavslut.</p></details>
-<details><summary>13. Hur dokumenterar jag efterlevnad för revision?</summary><p>Spara testprotokoll, rapporter och checklister i ett gemensamt dokumentarkiv.</p></details>
-<details><summary>14. Hur förankrar jag budget i organisationen?</summary><p>Visa på minskade rättsliga risker och ökad användarnöjdhet som affärsnytta.</p></details>
-<details><summary>15. Hur integrerar jag QA med tillgänglighet?</summary><p>Lägg till tillgänglighets­kontroller i era QA-testplaner och Definition of Done.</p></details>
-<details><summary>16. Hur säkerställer jag att nya funktioner följer lagen?</summary><p>Kräv tillgänglighetsreview som godkännande­kriterium inför release.</p></details>
-<details><summary>17. Hur hanterar jag externa krav (EU-direktiv)?</summary><p>Synka er tillgänglighetspolicy med EU-direktivet (EU 2016/2102) som ligger till grund för SFS 2023:254.</p></details>
-<details><summary>18. Hur rapporterar jag till styrelse/ledning?</summary><p>Presentera månadsvis status med KPI:er som % täckning och antal avvikelser.</p></details>
-<details><summary>19. Hur stämmer jag av med juridikavdelningen?</summary><p>Gör löpande granskning av era tolkningar av lagen med intern/extern juristexpert.</p></details>
-<details><summary>20. Hur förbereder jag för tillsyn från PTS?</summary><p>Samla all dokumentation, visa upp användartester och automatiserade testresultat vid en eventuell tillsyn.</p></details>
+                            <div class="role-section">
+                                <h4>Viktiga verktyg</h4>
+                                <ul>
+                                    <li>Kontrastcheckers (WebAIM, Stark)</li>
+                                    <li>Färgblindhetssimulering (Color Oracle)</li>
+                                    <li>Tillgängliga designsystem och komponenter</li>
+                                </ul>
+                            </div>
 
-<!-- Testare -->
-<h3>Testare</h3>
-<details><summary>1. Vilka verktyg används för automatisk testning?</summary><p>Populära är Axe, Lighthouse och WAVE. Integrera dem i CI/CD för kontinuerlig kontroll.</p></details>
-<details><summary>2. Hur utför jag manuella tester?</summary><p>Använd skärmläsare (NVDA, VoiceOver) och testa tangentbordsnavigering genom hela flödet.</p></details>
-<details><summary>3. Hur skriver jag testfall för tillgänglighet?</summary><p>Basera testfallen på WCAG-kriterier (t.ex. 1.1.1 non-text content) och definiera godkännande­kriterier.</p></details>
-<details><summary>4. Hur rapporterar jag fel och brister?</summary><p>Ange WCAG-kriterie (A/AA), steg för att reproducera och skärmdump vid behov i ert ärende­system.</p></details>
-<details><summary>5. Hur hanterar jag regressionstest?</summary><p>Spara automatiserade testresultat och jämför mot tidigare rapporter för att fånga återintroducerade fel.</p></details>
-<details><summary>6. Hur testar jag videors textning?</summary><p>Kontrollera att alla dialoger och ljudbeskrivningar finns i undertexterna i synk med videon.</p></details>
-<details><summary>7. Hur mäter jag färgkontrast?</summary><p>Använd kontrastmätare som Colour Contrast Analyser och verifiera mot WCAG 2.1 AA-kraven.</p></details>
-<details><summary>8. Hur testar jag responsivitet?</summary><p>Använd webbläsarens utvecklarverktyg och fysiska enheter med olika skärmstorlekar.</p></details>
-<details><summary>9. Hur involverar jag användare i tester?</summary><p>Rekrytera personer med olika funktionsnedsättningar och följ ett strukturerat testprotokoll.</p></details>
-<details><summary>10. Hur testar jag formulär?</summary><p>Utför tangentbordsnavigering, kontrollera etiketter och felmeddelanden enligt WCAG-kriterier.</p></details>
-<details><summary>11. Hur testar jag ARIA-attribut?</summary><p>Verifiera att roller, states och properties återspeglas korrekt i hjälpmedel och DOM.</p></details>
-<details><summary>12. Hur testar jag alternativa textbeskrivningar?</summary><p>Stäng av bilder och kontrollera att <code>alt</code>-texter förmedlar nödvändig information.</p></details>
-<details><summary>13. Hur skapar jag en testchecklista?</summary><p>Gör en matriz med WCAG-kriterier mot UI-komponenter och dokumentera pass/fail.</p></details>
-<details><summary>14. Hur prioriterar jag testinsatser?</summary><p>Börja med kärnflöden (inloggning, köp, kontaktformulär) där användarimpacten är störst.</p></details>
-<details><summary>15. Hur dokumenterar jag testresultat?</summary><p>Samla skärmdumpar, teststeg och felkoder i ert testhanteringsverktyg för spårbarhet.</p></details>
-<details><summary>16. Hur kör jag CLI-tester i pipeline?</summary><p>Installera Axe-CLI eller pa11y som npm-paket och kör dem som del av era build-script.</p></details>
-<details><summary>17. Hur testar jag komplexa interaktiva element?</summary><p>Gör användartester och kontrollera ARIA-anpassning med skärmläsare i realtid.</p></details>
-<details><summary>18. Hur testar jag dark mode?</summary><p>Byt <code>prefers-color-scheme</code> i devtools och verifiera kontrast och läsbarhet.</p></details>
-<details><summary>19. Hur följer jag upp åtgärder?</summary><p>Gör återtest av stängda ärenden och lägg in i ert regressionstestpaket.</p></details>
-<details><summary>20. Hur rapporterar jag tillgänglighetsstatus?</summary><p>Skapa ett månatligt testprotokoll som visar buggar per WCAG-nivå och täckningsgrad.</p></details>
+                            <div class="role-section">
+                                <h4>Läs mer</h4>
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://www.a11yproject.com/checklist/" target="_blank" rel="noopener noreferrer">
+                                            🔗 A11y Project Checklist
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.w3.org/WAI/tips/designing/" target="_blank" rel="noopener noreferrer">
+                                            🔗 Tips för tillgänglig design
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-<!-- Chefer -->
-<h3>Chefer</h3>
-<details><summary>1. Vilka juridiska skyldigheter har vi?</summary><p>Offentlig och privat sektor måste följa lagen om produkters och tjänsters tillgänglighet (SFS 2023:254) och WCAG 2.1 AA.</p></details>
-<details><summary>2. Vad händer vid bristande efterlevnad?</summary><p>PTS kan utfärda förelägganden, föreläganden om vite eller driva ärenden till förvaltningsrätt.</p></details>
-<details><summary>3. Hur säkrar jag resurser för tillgänglighet?</summary><p>Avsätt tid i projektplaner och budgetera för externa experter och licenser för testverktyg.</p></details>
-<details><summary>4. Hur utser jag ansvariga?</summary><p>Utnämn en tillgänglighetsansvarig på ledningsnivå och en operativ kontakt i varje projektteam.</p></details>
-<details><summary>5. Hur mäter jag affärsnyttan?</summary><p>Följ upp ökad användartillfredsställelse, färre supportsamtal och lägre juridisk risk.</p></details>
-<details><summary>6. Hur hanterar jag rapportering till ledningen?</summary><p>Rapportera KPI:er som % WCAG-täckning, antal avvikelser och status på åtgärdsplan.</p></details>
-<details><summary>7. Hur integrerar jag tillgänglighet i styrmodeller?</summary><p>Lägg till tillgänglighet som en del av era kvalitets- och riskparametrar i projektstyrningen.</p></details>
-<details><summary>8. Hur följer jag upp leverantörer?</summary><p>Ställ krav på tillgänglighet i RFP:er och granska deras leverans mot WCAG-testprotokoll.</p></details>
-<details><summary>9. Hur bygger jag intern kompetens?</summary><p>Investera i utbildning, certifieringar (IAAP) och återkommande workshops för era utvecklare och designers.</p></details>
-<details><summary>10. Hur skapar jag en tillgänglighetspolicy?</summary><p>Skriv en kortfattad, tydlig policy som anger mål, ansvarsfördelning och processer för tillgänglighetsarbete.</p></details>
-<details><summary>11. Hur budgeterar jag långsiktigt?</summary><p>Beräkna kostnaden för kontinuerliga tester, utbildning och verktyg som en årlig investering.</p></details>
-<details><summary>12. Hur hanterar jag verksamhetsrisker?</summary><p>Gör regelbundna riskanalyser — både juridiska och operativa — kopplat till er digitala tjänsteportfölj.</p></details>
-<details><summary>13. Hur kommunicerar jag vinster internt?</summary><p>Dela framgångshistorier från användartester och statistiska förbättringar i användarengagemang.</p></details>
-<details><summary>14. Hur stämmer jag av med PTS?</summary><p>Ha löpande dialog kring er planerade utrullning och eventuella avvikelser eller undantag.</p></details>
-<details><summary>15. Hur bedömer jag efterlevnad över tid?</summary><p>Använd versionskontroll och arkivera testprotokoll för att kunna jämföra status kvartalsvis.</p></details>
-<details><summary>16. Hur hanterar jag policy-uppdateringar?</summary><p>Granska och revidera policyn årligen eller vid förändringar i WCAG eller lagstiftning.</p></details>
-<details><summary>17. Hur engagerar jag ledningen?</summary><p>Presentera affärscase och riskanalyser på ledningsmöten för att få strategiskt stöd.</p></details>
-<details><summary>18. Hur stämmer jag av verksamhetsmål?</summary><p>Koppla tillgänglighetsmål till era övergripande digitala och affärsmässiga KPI:er.</p></details>
-<details><summary>19. Hur förbereder jag för extern revision?</summary><p>Samla all dokumentation, testresultat och policyer i ett strukturerat revisionspaket.</p></details>
-<details><summary>20. Hur säkerställer jag kontinuerlig förbättring?</summary><p>Inför tillgänglighet som en fast punkt i varje sprintplanering och retrospektiv.</p></details>
+                            <div class="faq-section">
+                                <h4>Vanliga frågor för designers</h4>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilken kontrast behöver jag mellan text och bakgrund?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>WCAG 2.1 AA kräver en kontrastkvot på minst 4,5:1 för normal text och 3:1 för stor text (18pt eller 14pt bold).</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur designar jag för tangentbordsnavigering?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Säkerställ tydliga fokustillstånd för alla interaktiva element. Fokusordningen ska följa en logisk ordning, vanligtvis från vänster till höger, uppifrån och ned.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilka färger bör jag undvika?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Undvik att enbart använda färg för att förmedla information. Kombinera alltid färg med text, form eller mönster för att säkerställa att information är tillgänglig för färgblinda.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur stor bör klickbara element vara?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Minst 44x44 pixlar för att vara tillgängliga för personer med motoriska svårigheter, enligt WCAG 2.1 AAA.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur hanterar jag formulärdesign för tillgänglighet?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Använd tydliga etiketter, gruppera relaterade fält, ge tydlig felhantering och tillräckligt med utrymme mellan fält.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Jurister -->
-<h3>Jurister</h3>
-<details><summary>1. Hur definieras “tillgänglighet” i lagen?</summary><p>Lagen (SFS 2023:254) refererar till WCAG 2.1 nivå AA för webbinnehåll och digitala tjänster.</p></details>
-<details><summary>2. Vilka produkter omfattas?</summary><p>Webbplatser, mobilappar, dokument (PDF, Word) och liveevenemang med digitalt gränssnitt.</p></details>
-<details><summary>3. Vilka aktörer omfattas?</summary><p>Offentlig sektor (myndigheter, kommuner, regioner) och privata företag som erbjuder tjänster till allmänheten.</p></details>
-<details><summary>4. Vilka påföljder kan uppstå?</summary><p>PTS kan utfärda förelägganden, vite eller driva ärenden till förvaltningsrätt.</p></details>
-<details><summary>5. Hur förhåller sig lagen till EU-direktiv?</summary><p>SFS 2023:254 implementerar EU-direktiv 2016/2102 om tillgänglighet i digital offentlig service.</p></details>
-<details><summary>6. Finns undantag i lagen?</summary><p>Vissa historiska dokument och nödsystem kan undantas, men huvudregeln är full efterlevnad.</p></details>
-<details><summary>7. Hur dokumenterar man efterlevnad?</summary><p>Spara testprotokoll, policyer och interna rapporter som bevis vid tillsyn.</p></details>
-<details><summary>8. När krävs konsekvensutredning?</summary><p>Vid större ändringar i digitala tjänster bör en tillgänglighetskonsekvensutredning genomföras.</p></details>
-<details><summary>9. Hur rapporterar man till PTS?</summary><p>Använd PTS webbaserade rapporteringsverktyg på lptt-rapportering.pts.se.</p></details>
-<details><summary>10. Hur hanterar man rättstvister?</summary><p>Säkerställ att era processer dokumenteras noggrant och anlita specialiserad juridisk rådgivning.</p></details>
-<details><summary>11. Hur tolkas “tillgänglighet” i domstol?</summary><p>Domstolar utgår från WCAG-kriterier och PTS rekommendationer vid bedömning av brister.</p></details>
-<details><summary>12. Hur påverkas leverantörsavtal?</summary><p>Inför klausuler om tillgänglighet och sanktioner vid utebliven efterlevnad i era avtal.</p></details>
-<details><summary>13. Hur hanterar man sekretess och tillgänglighet?</summary><p>Dokument som innehåller känslig information måste vara tillgängliga utan att kompromissa med sekretess.</p></details>
-<details><summary>14. Hur förhåller sig GDPR till tillgänglighet?</summary><p>Information enligt GDPR måste vara läsbar och åtkomlig även för personer med funktionsvariationer.</p></details>
-<details><summary>15. Hur gör man juridisk due diligence?</summary><p>Granska leverantörers tidigare efterlevnadshistorik och begär testprotokoll.</p></details>
-<details><summary>16. Hur uppdaterar man policyer?</summary><p>Se över och revidera era interna riktlinjer samtidigt som lagstiftningen ändras.</p></details>
-<details><summary>17. Hur hanterar man tvärjuridiska frågor?</summary><p>Samverka med avdelningar för IT-säkerhet, personuppgiftsskydd och inköp för helhetsperspektiv.</p></details>
-<details><summary>18. Hur granskar man tredjepartsverktyg?</summary><p>Begär tillgänglighetstestprotokoll och certifieringar för varje integrerad komponent.</p></details>
-<details><summary>19. Hur hanterar man force majeure?</summary><p>Lagen har ingen generell force majeure-klausul; avvikelser måste dokumenteras och rapporteras.</p></details>
-<details><summary>20. Hur förbereder jag för ny lagstiftning?</summary><p>Följ PTS och Riksdagens uppdateringar och anpassa era interna processer löpande.</p></details>
-</div>
-</section>
+                    <!-- Utvecklare -->
+                    <div class="tab-panel" role="tabpanel" id="utvecklare-panel" aria-labelledby="utvecklare-tab">
+                        <div class="card">
+                            <h3 class="card-title">För utvecklare</h3>
+                            <p class="card-subtitle">Så implementerar du tillgänglig kod</p>
+                            
+                            <div class="role-section">
+                                <h4>Ditt ansvar</h4>
+                                <p>Som utvecklare har du ansvar för att implementera tillgänglig kod som fungerar med olika hjälpmedel och följer standarder.</p>
+                                <ul>
+                                    <li>Använda semantisk HTML</li>
+                                    <li>Implementera ARIA-attribut korrekt</li>
+                                    <li>Säkerställa tangentbordsnavigering</li>
+                                    <li>Testa med skärmläsare</li>
+                                </ul>
+                            </div>
 
-<!-- Kontakt -->
-<section id="kontakt" class="mb-5">  
-<h2>Kontakt</h2>
-<p>Har du frågor eller synpunkter? Mejla oss på <a href="mailto:hej@lptt.se">hej@lptt.se</a></p>
-</section>
+                            <div class="role-section">
+                                <h4>Viktiga verktyg</h4>
+                                <ul>
+                                    <li>ESLint med tillgänglighetsregler</li>
+                                    <li>Skärmläsare (NVDA, VoiceOver)</li>
+                                    <li>axe DevTools för automatiserad testning</li>
+                                </ul>
+                            </div>
 
-<!-- Om sajten -->
-<section id="om" class="mb-5">
-<h2>Om sajten</h2>
-<p>Denna sajt är skapad av <a href="https://www.linkedin.com/in/am-i-ni/">Amin</a>, digital tillgänglighetsspecialist på Axess Lab i Stockholm.</p>
-</section>
-</main>
+                            <div class="role-section">
+                                <h4>Läs mer</h4>
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">
+                                            🔗 MDN Web Docs: Tillgänglighet
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener noreferrer">
+                                            🔗 ARIA Authoring Practices Guide
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-<footer class="bg-white py-3 border-top">
-<div class="container">
-<p class="mb-0">&copy; 2025 Allt om LPTT</p>
+                            <div class="faq-section">
+                                <h4>Vanliga frågor för utvecklare</h4>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            När ska jag använda ARIA-attribut?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Använd ARIA endast när semantisk HTML inte räcker till. Följ principen "No ARIA is better than bad ARIA". Använd ARIA för att förtydliga roller, tillstånd och egenskaper för komplexa komponenter.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur testar jag tangentbordsnavigering?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Koppla bort musen och navigera genom hela webbplatsen med endast tangentbordet. Säkerställ att alla interaktiva element kan nås och användas, och att fokusordningen är logisk.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilka är de vanligaste tillgänglighetsfelen i kod?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Saknade alt-texter för bilder, felaktig rubrikstruktur, avsaknad av etikett för formulärfält, och otillräcklig kontrastkvot är några av de vanligaste felen.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur hanterar jag dynamiskt innehåll för skärmläsare?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Använd ARIA live regions (aria-live) för att meddela skärmläsare om dynamiska ändringar. Använd olika värden (polite, assertive) beroende på hur viktigt meddelandet är.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur implementerar jag tillgängliga modala dialoger?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Använd role="dialog", aria-modal="true", och hantera fokus korrekt (fånga och behåll fokus inom dialogen). Säkerställ att dialogen kan stängas med både Escape-tangenten och en stängknapp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-</div>
-</footer>
+                    <!-- Testare -->
+                    <div class="tab-panel" role="tabpanel" id="testare-panel" aria-labelledby="testare-tab">
+                        <div class="card">
+                            <h3 class="card-title">För testare</h3>
+                            <p class="card-subtitle">Så testar du för tillgänglighet</p>
+                            
+                            <div class="role-section">
+                                <h4>Ditt ansvar</h4>
+                                <p>Som testare har du ansvar för att verifiera att produkten uppfyller tillgänglighetskraven och fungerar med olika hjälpmedel.</p>
+                                <ul>
+                                    <li>Genomföra automatiserade tillgänglighetstester</li>
+                                    <li>Utföra manuella tester med hjälpmedel</li>
+                                    <li>Dokumentera och prioritera tillgänglighetsproblem</li>
+                                    <li>Verifiera att åtgärder faktiskt löser problemen</li>
+                                </ul>
+                            </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                            <div class="role-section">
+                                <h4>Viktiga verktyg</h4>
+                                <ul>
+                                    <li>Automatiserade testverktyg (axe, WAVE)</li>
+                                    <li>Skärmläsare (NVDA, VoiceOver)</li>
+                                    <li>Tangentbordstestning</li>
+                                    <li>Checklistor baserade på WCAG</li>
+                                </ul>
+                            </div>
+
+                            <div class="role-section">
+                                <h4>Läs mer</h4>
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">
+                                            🔗 W3C: Utvärdera tillgänglighet
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener noreferrer">
+                                            🔗 axe DevTools
+                                            <span class="sr-only">(öppnas i nytt fönster)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="faq-section">
+                                <h4>Vanliga frågor för testare</h4>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur mycket kan jag förlita mig på automatiserade tester?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Automatiserade tester kan hitta cirka 30-40% av tillgänglighetsproblemen. Resten kräver manuell testning. Använd automatiserade verktyg som en första kontroll, men förlita dig inte enbart på dem.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilka är de viktigaste manuella testerna jag bör utföra?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Tangentbordsnavigering, skärmläsartester, zoom/förstoring upp till 200%, och tester med olika färginställningar är grundläggande manuella tester.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur prioriterar jag tillgänglighetsproblem?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Prioritera efter: 1) Lagkrav, 2) Blockerande problem för användare med funktionsnedsättningar, 3) Vanliga användningsfall, 4) Mindre problem som påverkar få användare.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Vilka skärmläsare bör jag testa med?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Testa med minst NVDA på Windows och VoiceOver på macOS/iOS. Om möjligt, testa även med JAWS (Windows) och TalkBack (Android).</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-button" aria-expanded="false">
+                                            Hur testar jag formulär för tillgänglighet?
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p>Kontrollera att alla fält har associerade etiketter, att felmeddelanden är tydliga och kopplade till rätt fält, och att formuläret kan fyllas i och skickas med endast tangentbordet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Vanliga frågor</h2>
+                <p class="section-intro">
+                    Här hittar du svar på de vanligaste frågorna om lagen om vissa produkter och tjänsters tillgänglighet.
+                </p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Vad är skillnaden mellan LPTT och DOS-lagen?
+                        </button>
+                        <div class="accordion-content">
+                            <p>DOS-lagen (Lagen om tillgänglighet till digital offentlig service) gäller endast offentliga aktörer och deras webbplatser och appar. LPTT har ett bredare omfång och omfattar både offentliga och privata aktörer samt fler typer av produkter och tjänster, inklusive e-handel, banktjänster och e-böcker.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            När måste min verksamhet uppfylla kraven?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Nya och ombyggda digitala tjänster ska vara tillgängliga senast 28 september 2025. Övriga tjänster ska vara tillgängliga senast 30 juni 2028. Det är dock klokt att börja arbeta med tillgänglighet så snart som möjligt.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Vilka sanktioner finns om vi inte följer lagen?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Post- och telestyrelsen (PTS) kan utfärda förelägganden och viten mot aktörer som inte följer lagen. Storleken på vitet beror på överträdelsens allvarlighet och företagets storlek.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Måste vi följa WCAG 2.2 eller räcker det med 2.1?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Lagen hänvisar till WCAG 2.1 nivå AA som minimikrav. WCAG 2.2 innehåller ytterligare krav som inte är obligatoriska enligt lagen, men som kan förbättra tillgängligheten ytterligare. Det är dock en god idé att implementera WCAG 2.2 eftersom det representerar den senaste standarden.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Finns det undantag från lagen?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ja, det finns vissa undantag. Till exempel omfattas inte innehåll som tillhandahålls av tredje part som inte finansieras eller utvecklas av den berörda aktören. Det finns också undantag för oproportionerlig börda, men detta måste motiveras och dokumenteras noggrant.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Hur vet jag om min produkt eller tjänst omfattas?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Om din organisation erbjuder digitala produkter eller tjänster till konsumenter, omfattas ni sannolikt av lagen. Detta inkluderar e-handelssajter, banktjänster, e-böcker, mobilappar och andra digitala tjänster. Vid osäkerhet, kontakta PTS för vägledning.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Vad innebär "oproportionerlig börda"?
+                        </button>
+                        <div class="accordion-content">
+                            <p>"Oproportionerlig börda" innebär att kostnaden eller arbetsinsatsen för att göra en produkt eller tjänst tillgänglig är orimligt stor i förhållande till nyttan. Detta måste dock motiveras och dokumenteras noggrant. Faktorer som organisationens storlek, resurser och karaktären på produkten eller tjänsten vägs in i bedömningen.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Behöver vi en tillgänglighetsredogörelse?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Till skillnad från DOS-lagen kräver inte LPTT en formell tillgänglighetsredogörelse. Dock är det god praxis att dokumentera tillgänglighetsarbetet och eventuella kända brister. Detta kan vara värdefullt vid en eventuell granskning från PTS.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Hur påbörjar vi vårt tillgänglighetsarbete?
+                        </button>
+                        <div class="accordion-content">
+                            <p>Börja med en nulägesanalys av era produkter och tjänster. Identifiera vilka som omfattas av lagen och genomför en tillgänglighetsgranskning. Utbilda personal, särskilt utvecklare, designers och innehållsskapare. Skapa en handlingsplan med prioriterade åtgärder och tidsplan.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Vad är skillnaden mellan WCAG nivå A, AA och AAA?
+                        </button>
+                        <div class="accordion-content">
+                            <p>WCAG har tre nivåer av tillgänglighetskrav:</p>
+                            <ul>
+                                <li>Nivå A: Grundläggande tillgänglighetskrav som måste uppfyllas.</li>
+                                <li>Nivå AA: Mer omfattande krav som adresserar de största hindren för användare med funktionsnedsättningar. Detta är den nivå som krävs enligt LPTT.</li>
+                                <li>Nivå AAA: Den högsta nivån med mycket detaljerade krav. Denna nivå är inte ett lagkrav men kan vara relevant för vissa specialiserade tjänster.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt" class="section">
+            <div class="container">
+                <h2 class="section-title">Kontakta oss</h2>
+                <p class="section-intro">
+                    Har du frågor om LPTT eller behöver du hjälp med tillgänglighetsarbetet? Kontakta oss gärna.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Skicka e-post</h3>
+                        <p>För frågor och funderingar, kontakta oss på:</p>
+                        <a href="mailto:hej@lptt.se" class="contact-link">
+                            📧 hej@lptt.se
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Följ oss</h3>
+                        <p>Följ oss på sociala medier för uppdateringar och nyheter om tillgänglighet.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Om sidan -->
+        <section id="om" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Om sidan</h2>
+                <p>Denna sida är skapad av Amin Amini som är tillgänglighetsspecialist på Axess Lab i Stockholm.</p>
+                <p>Syftet med sidan är att sprida kunskap om lagen om vissa produkter och tjänsters tillgänglighet (LPTT) och hjälpa organisationer att förstå och uppfylla kraven.</p>
+                <p>Innehållet på denna sida är utformat för att vara så tillgängligt som möjligt och följer WCAG 2.2 riktlinjer.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">LPTT.se</span>
+                    <span class="footer-copyright">© 2024</span>
+                </div>
+                <nav class="footer-nav" aria-label="Sidfot navigation">
+                    <a href="#lagen" class="footer-link">Lagen i korthet</a>
+                    <a href="#omfattas" class="footer-link">Vem omfattas</a>
+                    <a href="#skillnader" class="footer-link">Skillnader</a>
+                    <a href="#verktyg" class="footer-link">Verktyg</a>
+                    <a href="#roller" class="footer-link">För olika roller</a>
+                    <a href="#faq" class="footer-link">Frågor & Svar</a>
+                    <a href="#kontakt" class="footer-link">Kontakt</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
