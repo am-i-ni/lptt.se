@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Den nya tillgänglighetslagen – enkelt förklarad | LPTT</title>
+  <title>Allt om LPTT</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -13,7 +13,7 @@
 
   <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="/">LPTT</a>
+      <a class="navbar-brand fw-bold" href="/">Allt om LPTT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
               aria-controls="navMenu" aria-expanded="false" aria-label="Visa meny">
         <span class="navbar-toggler-icon"></span>
@@ -22,14 +22,12 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#korthet">Lagen i korthet</a></li>
           <li class="nav-item"><a class="nav-link" href="#omfattas">Vem omfattas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#obligationer">Obligationer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ansvar">Ansvar</a></li>
           <li class="nav-item"><a class="nav-link" href="#tidsplan">Tidsplan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resurser">Resurser</a></li>
           <li class="nav-item"><a class="nav-link" href="#verktyg">Verktyg</a></li>
-          <li class="nav-item"><a class="nav-link" href="#processkarta">Processkarta</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
-          <li class="nav-item"><a class="nav-link" href="#omsajten">Om sajten</a></li>
+          <li class="nav-item"><a class="nav-link" href="#om">Om sajten</a></li>
         </ul>
       </nav>
     </div>
@@ -76,8 +74,8 @@
       </div>
     </section>
 
-    <!-- Obligationer -->
-    <section id="obligationer" class="mb-5">
+    <!-- Ansvar -->
+    <section id="ansvar" class="mb-5">
       <h2 style="font-family:'DM Serif Display', serif;">Vad krävs av dig?</h2>
       <div class="accordion" id="accordionObligationer" style="font-family:'Nunito', sans-serif;">
         <div class="accordion-item">
@@ -138,26 +136,14 @@
         <li><strong>2025-09-28:</strong> Krav för nya webbplatser och uppdateringar.</li>
         <li><strong>2028-06-30:</strong> Slutgiltig efterlevnad för befintliga tjänster.</li>
       </ul>
-      <a href="lptt-tidsplan.ics" class="btn btn-outline-secondary">Ladda ner kalenderfil</a>
-    </section>
-
-    <!-- Resurser & verktyg -->
-    <section id="resurser" class="mb-5">
-      <h2 style="font-family:'DM Serif Display', serif;">Resurser & verktyg</h2>
-      <ul style="font-family:'Nunito', sans-serif;">
-        <li><a href="https://www.myndighet.se/" target="_blank" rel="noopener">Myndigheten för digital förvaltning</a></li>
-        <li><a href="checklista.pdf">Checklista (PDF)</a></li>
-        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE-verktyget</a></li>
-        <li><a href="kurser.html">Kurser & webinars</a></li>
-      </ul>
     </section>
 
     <!-- Verktyg (PTS) -->
     <section id="verktyg" class="mb-5">
       <h2 style="font-family:'DM Serif Display', serif;">Verktyg från PTS</h2>
       <ul style="font-family:'Nunito', sans-serif;">
-        <li><a href="https://lptt.pts.se/" target="_blank" rel="noopener">Testa tillgänglighet – PTS LPTT</a></li>
-        <li><a href="https://lptt-rapportering.pts.se/" target="_blank" rel="noopener">Rapportera avvikelser – PTS LPTT Rapportering</a></li>
+        <li><a href="https://lptt.pts.se/" >Testa tillgänglighet – PTS LPTT</a></li>
+        <li><a href="https://lptt-rapportering.pts.se/">Rapportera avvikelser – PTS LPTT Rapportering</a></li>
       </ul>
     </section>
 
@@ -190,83 +176,7 @@
     </ul>
   </div>
 </section>
-    
-    <!-- Processkarta enligt WCAG/WAI -->
-    <section id="processkarta" class="mb-5">
-      <h2 style="font-family:'DM Serif Display', serif;">Processkarta för tillgänglighet enligt WCAG/WAI</h2>
-           <svg
-      width="800" height="600"
-      viewBox="0 0 800 600"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-labelledby="processTitle processDesc"
-    >
-      <title id="processTitle">Processkarta för tillgänglighet</title>
-      <desc id="processDesc">
-        En cirkulär processkarta med sex steg: Styrning, Kartläggning, Planering, Implementering, Testning & Validering och Övervakning & Rapportering.
-      </desc>
-      <defs>
-        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L9,3 Z" fill="#000"/>
-        </marker>
-        <style>
-          .process-circle {
-            fill: none;
-            stroke: #000;
-            stroke-width: 4;
-          }
-          .process-text {
-            font-family: 'Nunito', sans-serif;
-            font-size: 16px;
-            text-anchor: middle;
-            dominant-baseline: middle;
-            fill: #000;
-          }
-        </style>
-      </defs>
-      
-      <!-- cirklar och text -->
-      <circle class="process-circle" cx="400" cy="100" r="60"/>
-      <text class="process-text" x="400" y="100">Styrning</text>
-      
-      <circle class="process-circle" cx="600" cy="200" r="60"/>
-      <text class="process-text" x="600" y="200">Kartläggning</text>
-      
-      <circle class="process-circle" cx="600" cy="400" r="60"/>
-      <text class="process-text" x="600" y="400">Planering</text>
-      
-      <circle class="process-circle" cx="400" cy="500" r="60"/>
-      <text class="process-text" x="400" y="500">Implementering</text>
-      
-      <circle class="process-circle" cx="200" cy="400" r="60"/>
-      <text class="process-text" x="200" y="400">Testning &amp; Validering</text>
-      
-      <circle class="process-circle" cx="200" cy="200" r="60"/>
-      <text class="process-text" x="200" y="200">Övervakning &amp; Rapportering</text>
-      
-      <!-- pilar (justerade start/slut i kant) -->
-      <path d="M453.66,126.83 L546.34,173.17" stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-      <path d="M600,260 L600,340"           stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-      <path d="M546.34,426.83 L453.66,473.17" stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-      <path d="M346.34,473.17 L253.66,426.83" stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-      <path d="M200,340    L200,260"           stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-      <path d="M253.66,173.17 L346.34,126.83" stroke="#000" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-    </svg>
-      <div style="font-family:'Nunito', sans-serif;">
-        <h3>1. Styrning</h3>
-        <p>Skapa tillgänglighetspolicy, utse ansvariga och säkra ledningsstöd.</p>
-        <h3>2. Kartläggning</h3>
-        <p>Gör nulägesanalys mot WCAG-krav och prioritera insatser.</p>
-        <h3>3. Planering</h3>
-        <p>Ta fram handlingsplan med mål, tidplan och budget.</p>
-        <h3>4. Implementering</h3>
-        <p>Utför kod- och designändringar enligt WCAG/WAI-tekniker.</p>
-        <h3>5. Testning & Validering</h3>
-        <p>Genomför manuella och automatiska tester, involvera användare.</p>
-        <h3>6. Övervakning & Rapportering</h3>
-        <p>Följ upp status, rapportera resultat och justera åtgärdsplanen.</p>
-      </div>
-    </section>
+   
 
     <!-- FAQ med alla frågor och svar -->
     <section id="faq" class="mb-5">
@@ -420,7 +330,7 @@
     </section>
 
     <!-- Om sajten -->
-    <section id="omsajten" class="mb-5" style="font-family:'Nunito', sans-serif;">
+    <section id="om" class="mb-5" style="font-family:'Nunito', sans-serif;">
       <h2 style="font-family:'DM Serif Display', serif;">Om sajten</h2>
       <p>Denna sajt är skapad av <a href="https://www.linkedin.com/in/am-i-ni/">Amin</a>, digital tillgänglighetsspecialist på Axess Lab i Stockholm.</p>
     </section>
