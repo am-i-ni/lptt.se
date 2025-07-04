@@ -424,8 +424,8 @@ body {
 }
 
 .link-list a {
-  color: #d97706;
-  text-decoration: none;
+  color: #000;
+  text-decoration: underline;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
