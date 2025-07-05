@@ -591,6 +591,7 @@ body {
   cursor: pointer;
   font-weight: 600;
   color: #1a1a1a; /* Improved from #333 */
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -606,7 +607,7 @@ body {
 
 .accordion-button::after {
   content: "+";
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #d97706;
   transition: transform 0.2s ease;
 }
