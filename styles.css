@@ -1,3 +1,7 @@
+:root {
+  --body-color: #000;
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -294,7 +298,7 @@ body {
 
 .section-intro {
   font-size: 1.125rem;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   margin-bottom: 3rem;
   text-align: center;
   max-width: 800px;
@@ -332,20 +336,20 @@ body {
 }
 
 .card-subtitle {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   margin-bottom: 1.5rem;
   font-style: italic;
 }
 
 .card-content {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   line-height: 1.6;
 }
 
 .card-list {
   list-style: disc;
   padding-left: 1.5rem;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
 }
 
 .card-list li {
@@ -370,7 +374,7 @@ body {
 .highlight-list {
   list-style: disc;
   padding-left: 1.5rem;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
 }
 
 .highlight-list li {
@@ -474,7 +478,7 @@ body {
 }
 
 .tool-description {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
@@ -497,7 +501,7 @@ body {
   padding: 1rem 1.5rem;
   cursor: pointer;
   font-weight: 600;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   font-size: 1rem; /* Increased from default to match body text */
   border-bottom: 3px solid transparent;
   transition: all 0.2s ease;
@@ -544,14 +548,14 @@ body {
 }
 
 .role-section p {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   margin-bottom: 1rem;
 }
 
 .role-section ul {
   list-style: disc;
   padding-left: 1.5rem;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
 }
 
 .role-section ul li {
@@ -630,7 +634,7 @@ body {
 }
 
 .accordion-content p {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -642,7 +646,7 @@ body {
 .accordion-content ul {
   list-style: disc;
   padding-left: 1.5rem;
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
 }
 
 .accordion-content ul li {
@@ -672,7 +676,7 @@ body {
 }
 
 .contact-item p {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   margin-bottom: 1.5rem;
 }
 
@@ -747,7 +751,7 @@ body {
 }
 
 .footer-copyright {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   font-size: 0.9rem;
 }
 
@@ -758,7 +762,7 @@ body {
 }
 
 .footer-link {
-  color: #374151; /* Improved from #666 */
+  color: var(--body-color); /* Improved from #666 */
   text-decoration: underline;
   font-size: 0.9rem;
   transition: color 0.2s ease;
