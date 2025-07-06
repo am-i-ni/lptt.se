@@ -84,6 +84,7 @@ body {
 
 /* Navigation */
 .nav {
+  position: relativ;
 }
 
 .nav-toggle {
