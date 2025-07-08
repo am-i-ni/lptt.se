@@ -1613,94 +1613,180 @@ visar på professionalism och engagemang.</p>
 </div>
 </section>
 
-<!-- Förbättrad FAQ-sektion -->
-<section id="faq" class="section section-alt mb-5">
-  <div class="container">
-    <h2 class="section-title">Vanliga frågor</h2>
-    <p class="section-intro">
-      Här hittar du både grundläggande och fördjupade svar på frågor om lagen om vissa produkter 
-      och tjänsters tillgänglighet (LPTT).
-    </p>
+<!-- FAQ -->
+<section id="faq" class="section section-alt">
+<div class="container">
+<h2 class="section-title">Vanliga frågor</h2>
+<p class="section-intro">
+Här hittar du svar på de vanligaste frågorna om lagen om
+vissa produkter och tjänsters tillgänglighet.
+</p>
 
-    <!-- Tema: Allmänt om lagen -->
-    <div class="faq-group mb-4">
-      <h3>Allmänt om lagen</h3>
-      <div class="accordion">
-        <details>
-          <summary>Vad är WCAG?</summary>
-          <p>Web Content Accessibility Guidelines (WCAG) är riktlinjer framtagna av W3C för att göra webbinnehåll mer tillgängligt för personer med funktionsnedsättningar.</p>
-        </details>
-        <details>
-          <summary>Varför finns LPTT?</summary>
-          <p>LPTT implementerar EU:s tillgänglighetsdirektiv i svensk lag. Syftet är att alla – oavsett funktionsförmåga – ska kunna använda digitala produkter och tjänster, stärka varumärket och minska juridiska risker.</p>
-        </details>
-        <details>
-          <summary>Vilka WCAG-nivåer gäller enligt lagen?</summary>
-          <p>Lagen kräver minst WCAG 2.1 nivå AA för webbplatser, appar och dokument. Vissa grundläggande krav (nivå A) måste alltid uppfyllas.</p>
-        </details>
-        <details>
-          <summary>Vilka produkter och tjänster omfattas?</summary>
-          <p>Lagen gäller digitala produkter och tjänster riktade till konsumenter, t.ex. webbplatser, mobilappar, e-handel, bank- och betaltjänster, e-böcker, audiovisuell media samt självbetjäningsterminaler.</p>
-        </details>
-      </div>
-    </div>
-
-    <!-- Tema: Tillämpning & Deadlines -->
-    <div class="faq-group mb-4">
-      <h3>Tillämpning &amp; Deadlines</h3>
-      <div class="accordion">
-        <details>
-          <summary>När måste vi vara klara?</summary>
-          <p>Nya och ombyggda digitala tjänster ska vara tillgängliga senast 28 september 2025. Övriga tjänster senast 30 juni 2028.</p>
-        </details>
-        <details>
-          <summary>Kan vi ansöka om undantag?</summary>
-          <p>Ja, undantag för “oproportionerlig börda” kan göras, men måste motiveras och dokumenteras. Läs mer på PTS webbplats.</p>
-        </details>
-        <details>
-          <summary>Vilka sanktioner finns om vi inte följer lagen?</summary>
-          <p>Post- och telestyrelsen (PTS) kan utfärda förelägganden och viten mot aktörer som inte uppfyller kraven.</p>
-        </details>
-        <details>
-          <summary>Hur skiljer sig LPTT från DOS-lagen?</summary>
-          <p>DOS-lagen (SFS 2018:1937) gäller statliga myndigheters interna webbplatser och appar. LPTT (SFS 2023:254) har ett bredare omfång och inkluderar alla aktörer som riktar digitala produkter eller tjänster till konsumenter, både offentliga och privata :contentReference[oaicite:5]{index=5}.</p>
-        </details>
-      </div>
-    </div>
-
-    <!-- Tema: Efterlevnad & Stöd -->
-    <div class="faq-group">
-      <h3>Efterlevnad &amp; stöd</h3>
-      <div class="accordion">
-        <details>
-          <summary>Hur kontrollerar PTS efterlevnad?</summary>
-          <p>PTS gör stickprov, granskar anmälningar och kan kräva korrigerande åtgärder eller utfärda viten. Anmäl brister via <a href="https://lptt-rapportering.pts.se/" target="_blank" rel="noopener">rapporteringstjänsten</a>.</p>
-        </details>
-        <details>
-          <summary>Vilka verktyg kan vi använda?</summary>
-          <p>Kombinera automatiserade tester (axe DevTools, WAVE) med manuella tester (NVDA, VoiceOver). Se vår <a href="#verktyg">verktygssektion</a> för fler tips.</p>
-        </details>
-        <details>
-          <summary>Hur kommer vi igång med arbetet?</summary>
-          <p>1. Gör en nulägesanalys mot WCAG 2.1 AA. 2. Utbilda utvecklare, designers och innehållsskapare. 3. Ta fram handlingsplan med prioriteringar, tidsplan och ansvar. 4. Mät och följ upp regelbundet.</p>
-        </details>
-        <details>
-          <summary>Hur mycket kan vi förlita oss på automatiserade tester?</summary>
-          <p>Automatiserade tester hittar cirka 30–40 % av tillgänglighetsproblemen. Resterande fel kräver manuella tester :contentReference[oaicite:6]{index=6}.</p>
-        </details>
-        <details>
-          <summary>Vilka är de viktigaste manuella testerna?</summary>
-          <p>Tangentbordsnavigering, skärmläsartester, zoom/förstoring upp till 200 %, och tester med olika färginställningar är grundläggande manuella tester :contentReference[oaicite:7]{index=7}.</p>
-        </details>
-        <details>
-          <summary>Hur utbildar vi teamet?</summary>
-          <p>Anordna återkommande workshops, e-learning och certifieringar (t.ex. CPACC) för utvecklare, designers och produktägare.</p>
-        </details>
-      </div>
-    </div>
-  </div>
+<div class="accordion">
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Vad är skillnaden mellan LPTT och DOS-lagen?
+</button>
+<div class="accordion-content">
+<p>DOS-lagen (Lagen om tillgänglighet till
+digital offentlig service) gäller endast
+offentliga aktörer och deras webbplatser och
+appar. LPTT har ett bredare omfång och
+omfattar både offentliga och privata aktörer
+samt fler typer av produkter och tjänster,
+inklusive e-handel, banktjänster och
+e-böcker.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+När måste min verksamhet uppfylla kraven?
+</button>
+<div class="accordion-content">
+<p>Nya och ombyggda digitala tjänster ska vara
+tillgängliga senast 28 september 2025.
+Övriga tjänster ska vara tillgängliga senast
+30 juni 2028. Det är dock klokt att börja
+arbeta med tillgänglighet så snart som
+möjligt.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Vilka sanktioner finns om vi inte följer lagen?
+</button>
+<div class="accordion-content">
+<p>Post- och telestyrelsen (PTS) kan utfärda
+förelägganden och viten mot aktörer som inte
+följer lagen. Storleken på vitet beror på
+överträdelsens allvarlighet och företagets
+storlek.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Måste vi följa WCAG 2.2 eller räcker det med
+2.1?
+</button>
+<div class="accordion-content">
+<p>Lagen hänvisar till WCAG 2.1 nivå AA som
+minimikrav. WCAG 2.2 innehåller ytterligare
+krav som inte är obligatoriska enligt lagen,
+men som kan förbättra tillgängligheten
+ytterligare. Det är dock en god idé att
+implementera WCAG 2.2 eftersom det
+representerar den senaste standarden.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Finns det undantag från lagen?
+</button>
+<div class="accordion-content">
+<p>Ja, det finns vissa undantag. Till exempel
+omfattas inte innehåll som tillhandahålls av
+tredje part som inte finansieras eller
+utvecklas av den berörda aktören. Det finns
+också undantag för oproportionerlig börda,
+men detta måste motiveras och dokumenteras
+noggrant.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Hur vet jag om min produkt eller tjänst
+omfattas?
+</button>
+<div class="accordion-content">
+<p>Om din organisation erbjuder digitala
+produkter eller tjänster till konsumenter,
+omfattas ni sannolikt av lagen. Detta
+inkluderar e-handelssajter, banktjänster,
+e-böcker, mobilappar och andra digitala
+tjänster. Vid osäkerhet, kontakta PTS för
+vägledning.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Vad innebär "oproportionerlig börda"?
+</button>
+<div class="accordion-content">
+<p>"Oproportionerlig börda" innebär att
+kostnaden eller arbetsinsatsen för att göra
+en produkt eller tjänst tillgänglig är
+orimligt stor i förhållande till nyttan.
+Detta måste dock motiveras och dokumenteras
+noggrant. Faktorer som organisationens
+storlek, resurser och karaktären på
+produkten eller tjänsten vägs in i
+bedömningen.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Behöver vi en tillgänglighetsredogörelse?
+</button>
+<div class="accordion-content">
+<p>Till skillnad från DOS-lagen kräver inte LPTT
+en formell tillgänglighetsredogörelse. Dock
+är det god praxis att dokumentera
+tillgänglighetsarbetet och eventuella kända
+brister. Detta kan vara värdefullt vid en
+eventuell granskning från PTS.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Hur påbörjar vi vårt tillgänglighetsarbete?
+</button>
+<div class="accordion-content">
+<p>Börja med en nulägesanalys av era produkter
+och tjänster. Identifiera vilka som omfattas
+av lagen och genomför en
+tillgänglighetsgranskning. Utbilda personal,
+särskilt utvecklare, designers och
+innehållsskapare. Skapa en handlingsplan med
+prioriterade åtgärder och tidsplan.</p>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"
+aria-expanded="false">
+Vad är skillnaden mellan WCAG nivå A, AA och
+AAA?
+</button>
+<div class="accordion-content">
+<p>WCAG har tre nivåer av
+tillgänglighetskrav:</p>
+<ul>
+<li>Nivå A: Grundläggande
+tillgänglighetskrav som måste
+uppfyllas.</li>
+<li>Nivå AA: Mer omfattande krav som
+adresserar de största hindren för
+användare med funktionsnedsättningar.
+Detta är den nivå som krävs enligt
+LPTT.</li>
+<li>Nivå AAA: Den högsta nivån med mycket
+detaljerade krav. Denna nivå är inte ett
+lagkrav men kan vara relevant för vissa
+specialiserade tjänster.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 
 <!-- Kontakt -->
 <section id="kontakt" class="section">
