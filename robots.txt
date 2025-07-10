@@ -1,0 +1,3 @@
+# Instruktioner för alla webb-crawlers (sökmotorer)
+User-agent: *
+Allow: /
