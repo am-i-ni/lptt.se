@@ -209,14 +209,14 @@ body {
 .hero-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #7c2d12; /* Improved from #92400e for better contrast */
+  color: #000; /* Improved from #92400e for better contrast */
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .hero-description {
   font-size: 1.25rem;
-  color: #7c2d12; /* Improved from #b45309 for better contrast */
+  color: #000; /* Improved from #b45309 for better contrast */
   margin-bottom: 2rem;
 }
 
