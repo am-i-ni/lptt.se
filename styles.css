@@ -150,7 +150,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #d97706;
+  color: #000;
   border-bottom-color: #d97706;
   outline: none;
 }
