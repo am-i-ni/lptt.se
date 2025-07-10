@@ -1,3 +1,4 @@
-# Instruktioner för alla webb-crawlers (sökmotorer)
 User-agent: *
 Allow: /
+
+Sitemap: https://www.lptt.se/sitemap.xml
