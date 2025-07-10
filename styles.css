@@ -516,7 +516,7 @@ body {
 }
 
 .tab-button.active {
-  color: #d97706;
+  color: #000;
   border-bottom-color: #d97706;
 }
 
