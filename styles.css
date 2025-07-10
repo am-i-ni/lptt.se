@@ -606,7 +606,7 @@ body {
 .accordion-button:focus {
   background: #fef3c7;
   outline: 2px solid #d97706;
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 
 .accordion-button::after {
