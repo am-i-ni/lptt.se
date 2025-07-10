@@ -199,17 +199,6 @@ function announceToScreenReader(message) {
   }, 1000)
 }
 
-// Add loading states and error handling
-document.addEventListener("DOMContentLoaded", () => {
-  // Add loading indicator for external links
-  const externalLinks = document.querySelectorAll('a[target="_blank"]')
-
-  externalLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      announceToScreenReader("Öppnar extern länk i nytt fönster")
-    })
-  })
-})
 
 // Keyboard trap for modal-like elements (if needed in future)
 function trapFocus(element) {
